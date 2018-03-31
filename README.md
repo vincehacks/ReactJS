@@ -1,5 +1,5 @@
 # ReactJS
-All React Code
+All React Code notes by Vince Chang
 
 
 ### REACTJS CODECADEMY PART 1
@@ -362,7 +362,7 @@ user navigates to a different website or closes their web browser
 - Use this method for cleaning up
  
 
-[COMPONENT LIFECYCLE LINK](http://busypeoples.github.io/post/react-component-lifecycle/)
+[COMPONENT LIFECYCLE](http://busypeoples.github.io/post/react-component-lifecycle/)
 
 
 #### Initialization
