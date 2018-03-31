@@ -226,4 +226,176 @@ bind that method inside of your constructor function!
 calls `.render()` as soon as the state has changed.
 
 
+### REACTJS CODECADEMY PART 2
 
+
+#### Questions:
+    1. Explain the this.function.bind(this) in the parent’s constructor 
+    2. What is the className used for again
+       - To define class styles like in CSS
+
+
+#### Stateless Components Inherit From Stateful Components
+  - If you want to pass a something to another component, you need to pass it
+  in the file that gives something. AKA you need to have the child be rendered
+  in the class of the giving
+ 
+
+#### Don’t Update Props
+- A component should **NEVER** update `this.props`
+- A React component should use props to store information that can be changed,
+but can only be changed by a different component.
+- A React component should use state to store information that the component
+itself can change.
+
+
+#### Style
+- **Double Curly Braces**: The outer curly braces inject JavaScript into JSX.
+They say, "everything between us should be read as JavaScript, not JSX."
+- The inner curly braces create a JavaScript object literal. They make this a
+valid JavaScript object:
+- Ex. `<h1 style={{ color: 'red' }}>Hello world</h1>`
+- One way to make styles reusable is to keep them in a separate JavaScript file
+- This file should export the styles that you want to reuse, via export. You
+can then import your styles into any component that wants them.
+ 
+
+####Container Components From Presentational Components
+- Separating container components from presentational components is a popular
+React programming pattern.
+- **Basic idea behind it**: if a component has to have state, make calculations
+based on props, or manage any other complex logic, then that component
+shouldn't also have to render HTML-like JSX.
+ 
+
+#### Stateless Functional Components
+- A component class written as a function is called a stateless functional
+component. Stateless functional components have some advantages over typical
+component classes. Stateless functional components usually have props passed
+to them
+ 
+
+#### propTypes
+- Useful for 2 reasons
+  1. **Prop validation**: ensures that your props are doing what they’re
+  suppose to be doing. If props are missing or if they’re present but aren’t
+  what you’re expecting, then a warning will bring in the console
+  2. **Documentation**: props make it easier to glance at a file and quickly
+  understand the component class inside
+- If a component expects a prop, then you can give the component class a
+propType
+ 
+
+#### React Forms
+- **uncontrolled component** :is a component that maintains its own internal
+state
+- **controlled component**: is a component that does not maintain any internal
+state. 
+- Since a controlled component has no state, it must be controlled by someone
+else.
+ 
+
+### Mounting Life Cycle Methods
+- **Life Cycle Methods**: are methods that get called at certain moments in a
+component’s life
+- You can write a life cycle method that gets called right before a component
+renders for the first time or even after a component renders
+ 
+
+#### componentWillMount
+- When a component renders for the first time, `componentWillMount` gets called
+right before render
+- ***LIFE CYCLE EVENTS ONLY EXECUTE THE FIRST TIME THAT A COMPONENT RENDERS!***
+- If you need to do something only the first time that a component renders,
+then it's probably a job for a mounting life cycle method!
+- `render` belongs to two categories: 
+  - mounting life cycle methods
+  - updating life cycle methods
+ 
+
+#### componentDidMount
+- When a component renders for the first time, `componentDidMount` gets called
+right after the HTML from render has finished loading
+- This is a good place to connect a React app to external applications, such as
+APIs or JS frameworks
+- Also a good place to set timers using setTimeout or setInterval
+
+
+### Updating/Unmounting Life cycle Methods
+
+ 
+#### componentWillReceiveProps
+- When a component instance updates, `componentWillReceiveProps` gets called
+before rendering begins
+- Gets passed one argument an object called `nextProps` which is a preview of
+the upcoming props object that the component is about to receive
+ 
+
+#### shouldComponentUpdate
+- When a component updates, `shouldComponentUpdate` gets called after
+`componentWillReceiveProps`, but still before rendering
+ 
+
+#### componentWillUpdate
+- `componentWillUpdate` gets called in between `shouldComponentUpdate` and
+render
+- Receives 2 arguments: 
+  - `nextProps`
+  - `nextState`
+- You can’t call `this.setState` from the body of `componentWIllUpdate`
+- **Main purpose**: is to interact with things outside of the React 
+architecture
+ 
+
+#### componentDidUpdate
+- When a component instance updates, `componentDidUpdate` gets called after any rendered HTML has finished loading
+- Passed 2 arguments: 
+  - `prevProps`
+  - `prevState`
+ 
+
+#### componentWillUnmount
+- A component’s unmounting period begins when the component is removed from the
+DOM
+- This could happen if the DOM is rerendered without the component, or if the
+user navigates to a different website or closes their web browser
+- Use this method for cleaning up
+ 
+
+[COMPONENT LIFECYCLE LINK](http://busypeoples.github.io/post/react-component-lifecycle/)
+
+
+#### Initialization
+    1. GetDefaultProps
+    2. GetInitialState
+    3. ComponentWIllMount
+    4. Render
+    5. ComponentDidMount
+ 
+
+#### Updating State
+    1. ShouldComponentUpdate
+    2. ComponentWillUpdate
+    3. Render
+    4. ComponentDidUpdate
+ 
+
+#### Updating Props
+    1. ComponentWillReceiveProps
+    2. ShouldComponentUpdate
+    3. ComponentWIllUpdate
+    4. Render
+    5. ComponentDidUpdate
+ 
+
+[VIRTUAL DOM](https://www.codecademy.com/articles/react-virtual-dom)
+
+In summary, here's what happens when you try to update the DOM in React:
+
+- The entire virtual DOM gets updated.
+- The virtual DOM gets compared to what it looked like before you updated it
+- React figures out which objects have changed.
+ **(THAT’S WHY THIS IS FASTER AND BETTER)**
+- The changed objects, and the changed objects only, get updated on the real
+DOM
+- Changes on the real DOM cause the screen to change.
