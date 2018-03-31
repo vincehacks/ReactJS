@@ -1,5 +1,5 @@
 # ReactJS
-All React Code notes by Vince Chang
+All ReactJS notes by Vince Chang
 
 
 ### REACTJS CODECADEMY PART 1
