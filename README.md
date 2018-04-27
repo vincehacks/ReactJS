@@ -260,7 +260,7 @@ valid JavaScript object:
 can then import your styles into any component that wants them.
  
 
-####Container Components From Presentational Components
+#### Container Components From Presentational Components
 - Separating container components from presentational components is a popular
 React programming pattern.
 - **Basic idea behind it**: if a component has to have state, make calculations
@@ -399,3 +399,15 @@ In summary, here's what happens when you try to update the DOM in React:
 - The changed objects, and the changed objects only, get updated on the real
 DOM
 - Changes on the real DOM cause the screen to change.
+
+
+### PLURALSIGHT
+
+- React is a JS library not a framework
+- Helps build user interfaces
+- Does not follow MVC Model
+
+
+#### Components
+- States can be changed, but props can not be changed
+- Class components can only change their internal state, not their properties
