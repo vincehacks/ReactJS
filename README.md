@@ -2,6 +2,8 @@
 Created by Vince Chang </br>
 
 ### Hello-World Tutorial Final Product
+- This was built using create-react-app module and following this tutorial
+- https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc
 ![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
