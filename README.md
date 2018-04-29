@@ -2,11 +2,10 @@
 Created by Vince Chang </br>
 
 ### Hello-World Tutorial Final Product
-
+![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
 ### REACTJS CODECADEMY PART 1
-![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
 ### Questions:
