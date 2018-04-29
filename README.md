@@ -1,8 +1,12 @@
 # ReactJS
 Created by Vince Chang </br>
 
+### Hello-World Tutorial Final Product
+
+
 
 ### REACTJS CODECADEMY PART 1
+![](https://github.com/vincehacks/BOBA.ME/blob/master/Images/First%20Push.png)
 
 
 ### Questions:
@@ -13,7 +17,7 @@ Created by Vince Chang </br>
        main?
        - Just in the main
     3. Is className suppose to be a CSS class that you create yourself?
-       - className is reserved 
+       - className is reserved
     4. When you render multiple components you need to have keys
     5. Do we utilize the Keys attribute in maps at all in our Macy’s code?
        - Yes
@@ -25,7 +29,7 @@ Created by Vince Chang </br>
        super?
        - Only use constructor if it has a state and if you want to attach a
        function to it, we call super to initialize the the component?
- 
+
 ### I. INTRO TO JSX
 
 
@@ -64,7 +68,7 @@ Ex:
 
 #### ReactDOM.render(JSX Expression, where you want to append expression to)
 - ReactDOM is the name of the JS Library
-- Library contains methods that deal with the DOM in some way or another 
+- Library contains methods that deal with the DOM in some way or another
 - `.render()` is the most common way to render JSX
 - Takes a JSX expression, creates a corresponding tree of DOM nodes, and adds
   that tree to the DOM
@@ -89,16 +93,16 @@ Ex:
 - The way you use class in HTML is different in JSX
 - HTML: `<h1 class="big">Hey</h1>`
 - JSX: `<h1 className="big">Hey</h1>`
-- This is because JSX gets translated into JS, and class is a reserved word in 
+- This is because JSX gets translated into JS, and class is a reserved word in
 JS!
 - When JSX is rendered, className is automatically rendered as class attributes
- 
+
 
 #### Self-Closing Tags
 - HTML: `<br>`
 - JSX: `</br>`
 - All self closing tags in JSX need to have a `/` or there will be an error!
- 
+
 
 #### JS in JSX
 - Use curly braces to use JS in JSX
@@ -112,12 +116,12 @@ JS!
 - **Note** that in HTML, event listener names are written in all lowercase,
 such as onclick or onmouseover. In JSX, event listener names are written in
 camelCase, such as onClick or onMouseOver
- 
+
 
 #### JSX Conditionals
 - You can not inject an if-statement into a JSX expression, but you could still
 do JS in a JSX expression just not if’s
- 
+
 
 #### .map()
 ```
@@ -155,7 +159,7 @@ class, you can make many of those components
 `class YourComponentNameGoesHere extends React.Component {}`
 - Component class variable names must begin with capital letters!
 - Every component class needs a render function that returns a JSX expression
-- Ex. 
+- Ex.
 ```
     import React from 'react';
     import ReactDOM from 'react-dom';
@@ -190,7 +194,7 @@ have to import that component!
 import statement isn't quite enough. You also need an export statement, written
 in the other file, exporting the variable that you hope to grab.
 - `export class NavBar extends React.Component {`
- 
+
 
 #### this.props
 - Every component has props
@@ -198,11 +202,11 @@ in the other file, exporting the variable that you hope to grab.
 - To see a component’s props object, you use `this.props`
 - You can pass info to a react component by giving a component an attribute
 - If you want to pass info that isn't a string, then wrap that information in
-curly braces. 
-- Ex. 
+curly braces.
+- Ex.
 `<Greeting name="Frarthur" town="Flundon" age={2} haunted={false} /> // 2 is not a string so it needs curly braces!`
 - It is common to pass event handler functions as props
- 
+
 
 #### this.state
 - They're 2 ways for a component to get dynamic info (Info that changes):
@@ -230,7 +234,7 @@ calls `.render()` as soon as the state has changed.
 
 
 #### Questions:
-    1. Explain the this.function.bind(this) in the parent’s constructor 
+    1. Explain the this.function.bind(this) in the parent’s constructor
     2. What is the className used for again
        - To define class styles like in CSS
 
@@ -239,7 +243,7 @@ calls `.render()` as soon as the state has changed.
   - If you want to pass a something to another component, you need to pass it
   in the file that gives something. AKA you need to have the child be rendered
   in the class of the giving
- 
+
 
 #### Don’t Update Props
 - A component should **NEVER** update `this.props`
@@ -258,7 +262,7 @@ valid JavaScript object:
 - One way to make styles reusable is to keep them in a separate JavaScript file
 - This file should export the styles that you want to reuse, via export. You
 can then import your styles into any component that wants them.
- 
+
 
 #### Container Components From Presentational Components
 - Separating container components from presentational components is a popular
@@ -266,14 +270,14 @@ React programming pattern.
 - **Basic idea behind it**: if a component has to have state, make calculations
 based on props, or manage any other complex logic, then that component
 shouldn't also have to render HTML-like JSX.
- 
+
 
 #### Stateless Functional Components
 - A component class written as a function is called a stateless functional
 component. Stateless functional components have some advantages over typical
 component classes. Stateless functional components usually have props passed
 to them
- 
+
 
 #### propTypes
 - Useful for 2 reasons
@@ -284,23 +288,23 @@ to them
   understand the component class inside
 - If a component expects a prop, then you can give the component class a
 propType
- 
+
 
 #### React Forms
 - **uncontrolled component** :is a component that maintains its own internal
 state
 - **controlled component**: is a component that does not maintain any internal
-state. 
+state.
 - Since a controlled component has no state, it must be controlled by someone
 else.
- 
+
 
 ### Mounting Life Cycle Methods
 - **Life Cycle Methods**: are methods that get called at certain moments in a
 component’s life
 - You can write a life cycle method that gets called right before a component
 renders for the first time or even after a component renders
- 
+
 
 #### componentWillMount
 - When a component renders for the first time, `componentWillMount` gets called
@@ -308,10 +312,10 @@ right before render
 - ***LIFE CYCLE EVENTS ONLY EXECUTE THE FIRST TIME THAT A COMPONENT RENDERS!***
 - If you need to do something only the first time that a component renders,
 then it's probably a job for a mounting life cycle method!
-- `render` belongs to two categories: 
+- `render` belongs to two categories:
   - mounting life cycle methods
   - updating life cycle methods
- 
+
 
 #### componentDidMount
 - When a component renders for the first time, `componentDidMount` gets called
@@ -323,36 +327,36 @@ APIs or JS frameworks
 
 ### Updating/Unmounting Life cycle Methods
 
- 
+
 #### componentWillReceiveProps
 - When a component instance updates, `componentWillReceiveProps` gets called
 before rendering begins
 - Gets passed one argument an object called `nextProps` which is a preview of
 the upcoming props object that the component is about to receive
- 
+
 
 #### shouldComponentUpdate
 - When a component updates, `shouldComponentUpdate` gets called after
 `componentWillReceiveProps`, but still before rendering
- 
+
 
 #### componentWillUpdate
 - `componentWillUpdate` gets called in between `shouldComponentUpdate` and
 render
-- Receives 2 arguments: 
+- Receives 2 arguments:
   - `nextProps`
   - `nextState`
 - You can’t call `this.setState` from the body of `componentWIllUpdate`
-- **Main purpose**: is to interact with things outside of the React 
+- **Main purpose**: is to interact with things outside of the React
 architecture
- 
+
 
 #### componentDidUpdate
 - When a component instance updates, `componentDidUpdate` gets called after any rendered HTML has finished loading
-- Passed 2 arguments: 
+- Passed 2 arguments:
   - `prevProps`
   - `prevState`
- 
+
 
 #### componentWillUnmount
 - A component’s unmounting period begins when the component is removed from the
@@ -360,7 +364,7 @@ DOM
 - This could happen if the DOM is rerendered without the component, or if the
 user navigates to a different website or closes their web browser
 - Use this method for cleaning up
- 
+
 
 [COMPONENT LIFECYCLE](http://busypeoples.github.io/post/react-component-lifecycle/)
 
@@ -371,14 +375,14 @@ user navigates to a different website or closes their web browser
     3. ComponentWIllMount
     4. Render
     5. ComponentDidMount
- 
+
 
 #### Updating State
     1. ShouldComponentUpdate
     2. ComponentWillUpdate
     3. Render
     4. ComponentDidUpdate
- 
+
 
 #### Updating Props
     1. ComponentWillReceiveProps
@@ -386,7 +390,7 @@ user navigates to a different website or closes their web browser
     3. ComponentWIllUpdate
     4. Render
     5. ComponentDidUpdate
- 
+
 
 [VIRTUAL DOM](https://www.codecademy.com/articles/react-virtual-dom)
 
