@@ -16,6 +16,7 @@ class HelloWorld extends Component {
     // This tells JavaScript that any time I see 'this' in chineseify, I want
     // you to refer to ME!
     this.chineseify = this.chineseify.bind(this);
+    this.removeGreeting = this.removeGreeting.bind(this);
   }
 
   // Method that handles the onClick
@@ -25,6 +26,10 @@ class HelloWorld extends Component {
     this.setState({greeting: "Ni Hao "});
   }
 
+  // Method that will remove a greeting from the props that was passed in!
+  removeGreeting(){
+    this.props.removeGreeting(this.props.name);
+  }
 
   render(){
     return (
@@ -33,13 +38,12 @@ class HelloWorld extends Component {
         {this.state.greeting} {this.props.name}!
         <br/>
         <button onClick={this.chineseify}>Chineseify!</button>
+        <br/>
+        <button onClick={this.removeGreeting}>Remove Me!</button>
       </div>
     );
   }
 }
-
-
-
 
 // Export this component so it could be used in other files!
 export default HelloWorld;

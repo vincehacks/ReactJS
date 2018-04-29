@@ -1,12 +1,16 @@
 // Importing the react library from the npm module
 import React from 'react';
-import HelloWorld from './HelloWorld';
 
+// Going to start using HelloWorldList instead!
+//import HelloWorld from './HelloWorld';
+import HelloWorldList from './HelloWorldList';
+
+// Instead of calling <HelloWorld/> multiple times, we can just call
+// <HelloWorldList/> once and all will be good!
 const App = () => {
   return (
     <div className="App">
-      <HelloWorld name="Vince"/>
-      <HelloWorld name="Chang"/>
+      <HelloWorldList/>
     </div>
   );
 };
