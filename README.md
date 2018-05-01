@@ -8,9 +8,6 @@ Created by Vince Chang </br>
 ![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
-### REACTJS CODECADEMY PART 1
-
-
 ### Questions:
     1. When should I use `extends component`? Instead of extend React.Component
        - They are the same!
@@ -39,6 +36,9 @@ Created by Vince Chang </br>
        - Tells exactly which component to use. If there were two+ components,
        it would be confusing as to which component to use/import
     10.!== compares both type and value and != just compares value
+
+
+### REACTJS CODECADEMY PART 1
 
 
 ### I. INTRO TO JSX
