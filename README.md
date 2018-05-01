@@ -1,6 +1,7 @@
 # ReactJS
 Created by Vince Chang </br>
 
+
 ### Hello-World Tutorial Final Product
 - This was built using create-react-app module and following this tutorial
 - https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc
@@ -11,25 +12,34 @@ Created by Vince Chang </br>
 
 
 ### Questions:
-    1. Did you follow the rule of having one most outer element in the React
-       code?
-        - yes
+    1. When should I use `extends component`? Instead of extend React.Component
+       - They are the same!
     2. Where do you need to call ReactDOM.render() ? Every file or just in the
        main?
        - Just in the main
     3. Is className suppose to be a CSS class that you create yourself?
        - className is reserved
     4. When you render multiple components you need to have keys
-    5. Do we utilize the Keys attribute in maps at all in our Macy’s code?
-       - Yes
-    6. Show example of import and export components, do you separate components
+    5. Show example of import and export components, do you separate components
        by file? Or is it better to have more than one component in the same
        file?
        - Depends on what you are trying to build
-    7. Why do we pass in props in a constructor and why do we have to call
+    6. Why do we pass in props in a constructor and why do we have to call
        super?
        - Only use constructor if it has a state and if you want to attach a
-       function to it, we call super to initialize the the component?
+       function to it, we call super to initialize the the component.
+    7. What does this.bind do and if you didn’t use it, what would 'this' refer
+       to? 
+       - If I didn’t bind it it would refer to the actual function that I'm
+       calling it in as oppose to the component itself
+    8. Why do I have to export 'App'?
+       - I have to import app to index.js (this is the entry point). create-
+       react-app will give index.js to index.html as a minified version!
+    9. What does export default COMPONENT do?
+       - Tells exactly which component to use. If there were two+ components,
+       it would be confusing as to which component to use/import
+    10.!== compares both type and value and != just compares value
+
 
 ### I. INTRO TO JSX
 
