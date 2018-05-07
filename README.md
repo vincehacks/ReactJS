@@ -1,11 +1,14 @@
 # ReactJS
 Created by Vince Chang </br>
 
+All of my ReactJS code, exercises, and notes will be found here.
 
 ### Hello-World Tutorial Final Product
-- This was built using create-react-app module and following this tutorial
+- This was built using create-react-app module
+- I have created a project that give users the ability to add or remove users
+as well as change the hello greeting.
 - https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc
-![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
+![Hello-World-Tutorial](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
 ### Questions:
@@ -26,7 +29,7 @@ Created by Vince Chang </br>
        - Only use constructor if it has a state and if you want to attach a
        function to it, we call super to initialize the the component.
     7. What does this.bind do and if you didn’t use it, what would 'this' refer
-       to? 
+       to?
        - If I didn’t bind it it would refer to the actual function that I'm
        calling it in as oppose to the component itself
     8. Why do I have to export 'App'?
