@@ -7,7 +7,7 @@ All of my ReactJS code, exercises, and notes will be found here.
 - This was built using create-react-app module
 - I have created a project that give users the ability to add or remove users
 as well as change the hello greeting.
-- ![Hello-World-Tutorial](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
+- ![](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
 ![](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
