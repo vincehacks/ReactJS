@@ -4,7 +4,7 @@ Created by Vince Chang </br>
 All of my ReactJS code, exercises, and notes will be found here.
 
 ### Hello-World Tutorial Final Product
-- This was built using create-react-app module
+- This was built using `create-react-app` module
 - I have created a project that give users the ability to add or remove users
 as well as change the hello greeting.
 - https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc
