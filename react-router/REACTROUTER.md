@@ -14,6 +14,7 @@ between routes using links.
     a <Switch> component?
     4. Examples with the props passed to <Route>
     5. When a path matches the route, a match object is created, but where?
+    6. Match params, where are the rest of the props? accessing it how?
 
 
 #### What is React Router
@@ -136,9 +137,6 @@ const Main = () => (
 ```
 
 
-
-
-
-
-
-
+#### Path Params
+- Sometimes you need to get information from the passed in parameters in the URL
+- Parameters will be stored in a `match.params` object
