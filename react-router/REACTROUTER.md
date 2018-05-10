@@ -9,12 +9,15 @@ between routes using links.
 
 # Questions
     1. Which type of router am I going to use?
-    2. Ask to see where just the routes are held
-    3. Do I have to use <Switch> to group routes or just have one place without
-    a <Switch> component?
+      - Will be using <HashRouter>, because we have no control of backend
+    2. Routes should be held in <App>
+    3. Do I have to use <Switch> to group routes
+      - No, because it's optional
     4. Examples with the props passed to <Route>
+      - Components are mostly used
     5. When a path matches the route, a match object is created, but where?
-    6. Match params, where are the rest of the props? accessing it how?
+      - Behind the scenes, but can access wherever a <Route> is used like
+      match.params.PARAMETERNAME
 
 
 #### What is React Router
