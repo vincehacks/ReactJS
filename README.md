@@ -367,7 +367,8 @@ architecture
 
 
 #### componentDidUpdate
-- When a component instance updates, `componentDidUpdate` gets called after any rendered HTML has finished loading
+- When a component instance updates, `componentDidUpdate` gets called after any
+rendered HTML has finished loading
 - Passed 2 arguments:
   - `prevProps`
   - `prevState`
