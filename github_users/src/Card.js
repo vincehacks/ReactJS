@@ -1,17 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Card extends Component {
-  render(){
+const Card = (props) => {
     return (
       <div style={{margin:'4em'}}>
-        <img width="200" height="200" src={this.props.avatarUrl}/>
+        <img width="100" height="100" src={props.avatar_url} alt={""}/>
         <div style={{display: 'inline-block', marginLeft: 10}}>
-          <div style={{fontSize:'1.25em', fontWeight: 'bold'}}>{this.props.name}</div>
-          <div>Github ID: {this.props.githubID}</div>
+          <div style={{fontSize:'1.25em', fontWeight: 'bold'}}>{props.name}</div>
+          <div>Github Login ID: {props.login}</div>
         </div>
       </div>
     );
-  }
 }
 
 export default Card;
