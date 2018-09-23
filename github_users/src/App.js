@@ -5,7 +5,8 @@ import Form from './Form';
 
 class App extends Component  {
 
-  // Actual data that is initially being rendered
+  // Actual data that is initially being rendered, using github api to retrieve
+  // Avatar
   state = {
     cards: [
       {
