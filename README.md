@@ -3,7 +3,7 @@ Created by Vince Chang </br>
 
 All of my ReactJS code, exercises, and notes will be found here.
 
-# Projects
+### Projects
 
 ### Hello-World Final Project
 - This was built using `create-react-app` module
