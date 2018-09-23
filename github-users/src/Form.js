@@ -28,10 +28,9 @@ class Form extends Component {
     this.setState({userName: ''});
   };
 
-  /* Function: addNewCard
-   * Description: This function will take a JSON object that is returned by the
-   * call to github's API. Will reset the new cards object to contain the new
-   * card that was retrieved
+  /* Function: render
+   * Description: This function will be responsible for showing the input field
+   * and button.
    */
   render() {
     return (
