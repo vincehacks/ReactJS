@@ -12,8 +12,8 @@ as well as change the hello greeting.
 ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
 
 
-### Github_Users Final Product
-- Uses Github's API to make pull requests to retrieve and renderinformation
+### Github-Users Final Product
+- Uses Github's API to make pull requests to retrieve and render information
 about the users
 - This is the final product:
 ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github-users/FinalProduct.png)
