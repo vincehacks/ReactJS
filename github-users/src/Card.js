@@ -1,5 +1,10 @@
+// Created by Vince Chang
+
 import React from 'react';
 
+/* Function: Card
+ * Description: This function will create individual github cards
+ */
 const Card = (props) => {
     return (
       <div style={{margin:'4em'}}>

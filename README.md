@@ -3,13 +3,20 @@ Created by Vince Chang </br>
 
 All of my ReactJS code, exercises, and notes will be found here.
 
-### Hello-World Tutorial Final Product
+### Hello-World Final Product
 - This was built using `create-react-app` module
 - I have created a project that give users the ability to add or remove users
 as well as change the hello greeting.
 - [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
 - This is the final product:
 ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
+
+
+### Github_Users Final Product
+- Uses Github's API to make pull requests to retrieve and renderinformation
+about the users
+- This is the final product:
+![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github-users/FinalProduct.png)
 
 
 ### Questions:

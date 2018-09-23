@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React, {Component} from 'react';
 import CardList from './CardList';
 import Form from './Form';
@@ -5,8 +7,8 @@ import Form from './Form';
 
 class App extends Component  {
 
-  // Actual data that is initially being rendered, using github API to retrieve
-  // Avatar
+  // Data that is initially being rendered, using github API to retrieve Avatar
+  // State is updated to contain new cards that are added dynamically
   state = {
     cards: [
       {
@@ -22,10 +24,20 @@ class App extends Component  {
     ]
   };
 
+  /* Function: addNewCard
+   * Description: This function will take a JSON object that is returned by the
+   * call to github's API. Will reset the new cards object to contain the new
+   * card that was retrieved
+   */
   addNewCard = (cardInfo) => {
     this.setState({cards: this.state.cards.concat(cardInfo)});
   };
 
+  /* Function: render
+   * Description: This function will render both the Form and CardList
+   * components. Form will be passed onSubmit and the CardList will be passed
+   * the data of cards
+   */
   render() {
     return (
       <div className="App">
