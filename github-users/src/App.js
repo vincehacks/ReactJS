@@ -14,12 +14,14 @@ class App extends Component  {
       {
         name: "Vince Chang",
         avatar_url: "https://avatars2.githubusercontent.com/u/11703494?v=4",
-        login: "vincehacks"
+        login: "vincehacks",
+        url:"https://api.github.com/users/vincehacks"
       },
       {
         name: "Zach Ho",
         avatar_url: "https://avatars1.githubusercontent.com/u/15718708?v=4",
-        login: "zachho123"
+        login: "zachho123",
+        url:"https://api.github.com/users/zachho123"
       }
     ]
   };
