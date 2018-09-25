@@ -10,7 +10,7 @@ const Button = (props) => {
 
   return(
     <div className="col-2">
-      <button>=</button>
+      <button disabled={props.selectedNumbers.length === 0}>=</button>
     </div>
   );
 

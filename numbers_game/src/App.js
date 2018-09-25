@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React, { Component } from 'react';
 import './App.css';
 import Game from './Game';

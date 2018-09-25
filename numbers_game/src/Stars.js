@@ -7,11 +7,10 @@ import React from 'react';
  * render them onto the screen
  */
 const Stars = (props) => {
-  const numberOfStars = 1 + Math.floor(Math.random() * 9);
 
   let stars = [];
 
-  for(let i = 0; i < numberOfStars; i++){
+  for(let i = 0; i < props.numberOfStars; i++){
     stars.push(<i key={i} className="fas fa-star"></i>);
   }
   return(
