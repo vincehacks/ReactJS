@@ -5,18 +5,30 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### Projects
 
-### Hello-World Final Project
-- This was built using `create-react-app` module
-- I have created a project that give users the ability to add or remove users
-as well as change the hello greeting.
+### Hello_World Final Project
+- Objective is to enter in names that will be placed on individual cards. The
+user will be able to have the ability to add or remove users and have the
+functionality to change the hello greeting.
 - [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
-![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello-world/FinalProduct.png)
+![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png)
 
 
-### Github-Users Final Project
+### Github_Users Final Project
 - Uses Github's API to make pull requests to retrieve and render information
 about the users
-![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github-users/FinalProduct.png)
+![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github_users/FinalProduct.png)
+
+
+### Numbers_Game Final Project
+- The purpose of the game is to allow users to click from the list of numbers
+with the objective to click on one more more numbers that add up to the target
+number. The UI will keep showing new target numbers until all numbers have been
+used. If the user experiences a case where the remaining numbers don't add up
+to the target number, then they are allowed the ability to refresh their target
+number up to 5 times.
+- Used Bootstrap, Font Awesome and CSS to build layout of the UI for the game
+- 5 Components: Game, Numbers, Stars, Button, Answer
+![Final Product](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct.png)
 
 
 ### Questions:
