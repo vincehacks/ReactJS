@@ -8,13 +8,16 @@ import React from 'react';
  */
 const Numbers = (props) => {
 
-  // Numbers that are user can choose from
-  const arrayOfNumbers = [1,2,3,4,5,6,7,8,9];
+  // // Numbers that are user can choose from
+  // const arrayOfNumbers = [1,2,3,4,5,6,7,8,9];
 
   /* Function: numberClassName
    * Description: This function will set the appropriate class for each number
    */
   const numberClassName = (number) => {
+    if(props.usedNumbers.indexOf(number) >= 0){
+      return 'used';
+    }
     if(props.selectedNumbers.indexOf(number) >= 0){
       return 'selected';
     }
@@ -23,7 +26,7 @@ const Numbers = (props) => {
   return(
     <div className="card">
       <div>
-        {arrayOfNumbers.map((number, i) =>
+        {props.arrayOfNumbers.map((number, i) =>
           <span key={i} className={numberClassName(number)}
                 onClick={() => props.selectNumber(number)}>
             {number}

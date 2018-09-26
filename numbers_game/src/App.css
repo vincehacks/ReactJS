@@ -31,3 +31,7 @@ span{
   color:#99bb99;
   cursor: not-allowed;
 }
+
+.fa-refresh{
+  font-family: "Helvetica Neue";
+}
