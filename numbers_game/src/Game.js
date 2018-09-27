@@ -7,6 +7,7 @@ import Answer from './Answer';
 import Numbers from './Numbers';
 import DoneFrame from './DoneFrame';
 
+
 /* Function: Game
  * Description: The purpose of the game is to allow users to click from the
  * numbers component that add up to the target number, until all numbers
@@ -106,20 +107,6 @@ class Game extends React.Component {
   }
 
 
-  /* Function: possibleSolutions
-   * Description: This function will
-   */
-  possibleSolutions = ({randomNumberOfStars, usedNumbers}) => {
-    // All numbers that are not currently being used
-    const possibleNumbers = this.arrayOfNumbers.filter(number =>
-      usedNumbers.indexOf(number) === -1
-    );
-
-    // Checking the combination of numbers to see if it adds up to the target
-    return possibleCombinationSum(possibleNumbers,randomNumberOfStars);
-  }
-
-
   /* Function: possibleCombinationSum
    * Description: This function will determine if the possible combination of
    * numbers can add up to the target value.
@@ -129,7 +116,7 @@ class Game extends React.Component {
     if (arr[0] > n) { return false; }
     if (arr[arr.length - 1] > n) {
       arr.pop();
-      return possibleCombinationSum(arr, n);
+      return this.possibleCombinationSum(arr, n);
     }
     var listSize = arr.length, combinationsCount = (1 << listSize)
     for (var i = 1; i < combinationsCount ; i++ ) {
@@ -140,6 +127,20 @@ class Game extends React.Component {
       if (n === combinationSum) { return true; }
     }
     return false;
+  }
+
+
+  /* Function: possibleSolutions
+   * Description: This function will
+   */
+  possibleSolutions = ({randomNumberOfStars, usedNumbers}) => {
+    // All numbers that are not currently being used
+    const possibleNumbers = this.arrayOfNumbers.filter(number =>
+      usedNumbers.indexOf(number) === -1
+    );
+
+    // Checking the combination of numbers to see if it adds up to the target
+    return this.possibleCombinationSum(possibleNumbers,randomNumberOfStars);
   }
 
 
@@ -154,7 +155,7 @@ class Game extends React.Component {
       if(prevState.usedNumbers.length === 9){
         return {doneStatus: 'Great Job! You Won!'}
       }
-      if(prevState.numOfRedraws === 0 && !this.possibleSolution()){
+      if(prevState.numOfRedraws === 0 && !this.possibleSolutions({randomNumberOfStars: this.state.randomNumberOfStars, usedNumbers: this.state.usedNumbers})){
         return {doneStatus: 'Game Over, You Loss.'}
       }
     });
@@ -165,16 +166,16 @@ class Game extends React.Component {
    * Description: This function will reset all the states so game can be played
    * again
    */
-  // resetGame = () => {
-  //   this.setState(
-  //     selectedNumbers: [],
-  //     randomNumberOfStars: 1 + Math.floor(Math.random() * 9),
-  //     answerIsCorrect: null,
-  //     usedNumbers: [],
-  //     numOfRedraws: 5,
-  //     doneStatus: null
-  //   )
-  // }
+  resetGame = () => {
+    this.setState({
+      selectedNumbers: [],
+      randomNumberOfStars: 1 + Math.floor(Math.random() * 9),
+      answerIsCorrect: null,
+      usedNumbers: [],
+      numOfRedraws: 5,
+      doneStatus: null
+    });
+  }
 
 
   /* Function: render
