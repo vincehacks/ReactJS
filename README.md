@@ -5,7 +5,7 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### Projects
 
-### Hello_World Final Project
+### Hello_World
 - Objective is to enter in names that will be placed on individual cards. The
 user will be able to have the ability to add or remove users and have the
 functionality to change the hello greeting.
@@ -13,13 +13,13 @@ functionality to change the hello greeting.
 ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png)
 
 
-### Github_Users Final Project
+### Github_Users
 - Uses Github's API to make pull requests to retrieve and render information
 about the users
 ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github_users/FinalProduct.png)
 
 
-### Numbers_Game Final Project
+### Numbers_Game
 - Description: The purpose of the game is to allow users to click from the list
 of numbers with the objective to click on one more more numbers that add up to
 the target number. The UI will keep showing new target numbers until all
