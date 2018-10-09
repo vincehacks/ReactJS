@@ -8,7 +8,7 @@ import React from 'react';
  */
 const DoneFrame =  (props) => {
   return(
-    <div>
+    <div className="message-align">
       <h2 className="text-center">{props.doneStatus}</h2>
       <button className="btn btn-secondary" onClick={props.resetGame}>
         Play Again

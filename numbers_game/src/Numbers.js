@@ -8,9 +8,6 @@ import React from 'react';
  */
 const Numbers = (props) => {
 
-  // // Numbers that are user can choose from
-  // const arrayOfNumbers = [1,2,3,4,5,6,7,8,9];
-
   /* Function: numberClassName
    * Description: This function will set the appropriate class for each number
    */
@@ -24,14 +21,16 @@ const Numbers = (props) => {
   }
 
   return(
-    <div className="card">
-      <div>
-        {props.arrayOfNumbers.map((number, i) =>
-          <span key={i} className={numberClassName(number)}
-                onClick={() => props.selectNumber(number)}>
-            {number}
-          </span>
-        )}
+    <div style={{margin:"auto",marginTop:"2%"}}>
+      <div className="card">
+        <div>
+          {props.arrayOfNumbers.map((number, i) =>
+            <span key={i} className={numberClassName(number)}
+                  onClick={() => props.selectNumber(number)}>
+              {number}
+            </span>
+          )}
+        </div>
       </div>
     </div>
   );

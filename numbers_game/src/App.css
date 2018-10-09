@@ -35,3 +35,17 @@ span{
 .fa-refresh{
   font-family: "Helvetica Neue";
 }
+
+.col-5{
+  text-align: center;
+}
+
+.col-2{
+  text-align: center;
+}
+
+.message-align{
+  text-align: center;
+  margin-top: 2%;
+  width: 100%;
+}

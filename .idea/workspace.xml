@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e4397305-804b-4690-a905-6e0b3d39e591" name="Default Changelist" comment="Trying a push from webstorm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github-users/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/github-users/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbers_game/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbers_game/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbers_game/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/numbers_game/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbers_game/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/numbers_game/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbers_game/src/DoneFrame.js" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/src/DoneFrame.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/numbers_game/src/Numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/numbers_game/src/Numbers.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,128 +21,61 @@
     <session id="-579642399">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="5" />
+          <entry key="css" value="7" />
           <entry key="html" value="4" />
-          <entry key="js" value="29" />
+          <entry key="js" value="34" />
           <entry key="json" value="1" />
-          <entry key="md" value="3" />
+          <entry key="md" value="5" />
           <entry key="png" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="5" />
+          <entry key="CSS" value="7" />
           <entry key="HTML" value="4" />
           <entry key="Image" value="3" />
           <entry key="JSON" value="1" />
-          <entry key="JavaScript" value="29" />
-          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="JavaScript" value="34" />
+          <entry key="PLAIN_TEXT" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="388" />
+          <entry key="css" value="539" />
           <entry key="html" value="42" />
-          <entry key="js" value="5717" />
-          <entry key="md" value="251" />
+          <entry key="js" value="11163" />
+          <entry key="md" value="1175" />
           <entry key="txt" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="388" />
+          <entry key="CSS" value="539" />
           <entry key="HTML" value="42" />
-          <entry key="JavaScript" value="5717" />
-          <entry key="PLAIN_TEXT" value="282" />
+          <entry key="JavaScript" value="11163" />
+          <entry key="PLAIN_TEXT" value="1206" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/App.css">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/Game.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
-              <folding>
-                <element signature="e#27#53#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/Numbers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/Stars.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/Button.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/numbers_game/src/Answer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+            <state relative-caret-position="379">
+              <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -171,20 +101,22 @@
         <option value="$PROJECT_DIR$/github_users/src/CardList.js" />
         <option value="$PROJECT_DIR$/github_users/src/Card.js" />
         <option value="$PROJECT_DIR$/hello-world/README.md" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/github-users/src/Form.js" />
         <option value="$PROJECT_DIR$/github-users/README.md" />
         <option value="$PROJECT_DIR$/github-users/src/App.js" />
         <option value="$PROJECT_DIR$/github-users/src/Card.js" />
         <option value="$PROJECT_DIR$/github-users/public/index.html" />
-        <option value="$PROJECT_DIR$/numbers_game/src/App.js" />
+        <option value="$PROJECT_DIR$/numbers_game/README.md" />
         <option value="$PROJECT_DIR$/numbers_game/public/index.html" />
+        <option value="$PROJECT_DIR$/numbers_game/src/Stars.js" />
         <option value="$PROJECT_DIR$/numbers_game/src/Answer.js" />
         <option value="$PROJECT_DIR$/numbers_game/src/Button.js" />
-        <option value="$PROJECT_DIR$/numbers_game/src/Stars.js" />
+        <option value="$PROJECT_DIR$/numbers_game/src/App.js" />
         <option value="$PROJECT_DIR$/numbers_game/src/Game.js" />
         <option value="$PROJECT_DIR$/numbers_game/src/Numbers.js" />
+        <option value="$PROJECT_DIR$/numbers_game/src/DoneFrame.js" />
         <option value="$PROJECT_DIR$/numbers_game/src/App.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -195,13 +127,13 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/github-users/node_modules" />
+    <handled-path value="$PROJECT_DIR$/github_users/node_modules" />
     <handled-path value="$PROJECT_DIR$/numbers_game/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/github-users/package.json" />
-      <path value="$PROJECT_DIR$/hello-world/package.json" />
+      <path value="$PROJECT_DIR$/github_users/package.json" />
+      <path value="$PROJECT_DIR$/hello_world/package.json" />
       <path value="$PROJECT_DIR$/node_modules/asap/package.json" />
       <path value="$PROJECT_DIR$/node_modules/core-js/package.json" />
       <path value="$PROJECT_DIR$/node_modules/encoding/package.json" />
@@ -270,12 +202,6 @@
               <item name="ReactJS" type="462c0819:PsiDirectoryNode" />
               <item name="numbers_game" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ReactJS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ReactJS" type="462c0819:PsiDirectoryNode" />
-              <item name="numbers_game" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -285,7 +211,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,7 +238,10 @@
       <workItem from="1537462761234" duration="3010000" />
       <workItem from="1537553052371" duration="7957000" />
       <workItem from="1537668930832" duration="6882000" />
-      <workItem from="1537806037777" duration="9463000" />
+      <workItem from="1537806037777" duration="29045000" />
+      <workItem from="1538003738433" duration="12000" />
+      <workItem from="1538083099147" duration="2797000" />
+      <workItem from="1539101605101" duration="1903000" />
     </task>
     <task id="LOCAL-00001" summary="Trying a push from webstorm">
       <created>1537670665364</created>
@@ -339,7 +268,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27312000" />
+    <option name="totallyTimeSpent" value="51606000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,7 +295,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32959184" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32911393" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.31836733" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.34081632" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32911393" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -420,16 +349,16 @@
     <option name="LAST_COMMIT_MESSAGE" value="Trying a push from webstorm" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hello-world/src/App.js">
+    <entry file="file://$PROJECT_DIR$/hello_world/src/App.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/package.json">
+    <entry file="file://$PROJECT_DIR$/github_users/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello-world/src/AddGreeter.css">
+    <entry file="file://$PROJECT_DIR$/hello_world/src/AddGreeter.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hello-world/src/AddGreeter.js">
+    <entry file="file://$PROJECT_DIR$/hello_world/src/AddGreeter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
           <caret column="32" selection-end-line="1" />
@@ -439,121 +368,102 @@
     <entry file="file://$PROJECT_DIR$/github_users/src/test.js" />
     <entry file="file://$PROJECT_DIR$/github_users/src/mn.js" />
     <entry file="file://$PROJECT_DIR$/hello-world/README.md" />
-    <entry file="file://$PROJECT_DIR$/hello-world/FinalProduct.png">
+    <entry file="file://$PROJECT_DIR$/hello_world/FinalProduct.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/FinalProduct.png">
+    <entry file="file://$PROJECT_DIR$/github_users/FinalProduct.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/github-users/README.md" />
-    <entry file="file://$PROJECT_DIR$/hello-world/src/App.test.js">
+    <entry file="file://$PROJECT_DIR$/hello_world/src/App.test.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/public/index.html">
+    <entry file="file://$PROJECT_DIR$/github_users/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="531">
           <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/lk.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/index.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/src/Card.js">
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/lk.js" />
+    <entry file="file://$PROJECT_DIR$/github_users/src/Card.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/src/CardList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#27#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" selection-start-line="37" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="e#27#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github-users/src/Form.js">
+    <entry file="file://$PROJECT_DIR$/github_users/src/Form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-129">
           <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/numbers_game/README.md" />
+    <entry file="file://$PROJECT_DIR$/hello_world/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/numbers_game/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="26" column="35" lean-forward="true" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
+        <state relative-caret-position="765">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/Stars.js">
+    <entry file="file://$PROJECT_DIR$/github_users/src/CardList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="105">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/Button.js">
+    <entry file="file://$PROJECT_DIR$/github_users/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="555">
+          <caret line="37" selection-start-line="37" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="735">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/numbers_game/src/Answer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="61" selection-start-line="5" selection-start-column="61" selection-end-line="5" selection-end-column="61" />
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/DoneFrame.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/numbers_game/src/Game.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="-2071">
+          <caret line="51" column="29" lean-forward="true" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding>
             <element signature="e#27#53#0" expanded="true" />
           </folding>
@@ -562,15 +472,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/numbers_game/src/Numbers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="345">
+          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/numbers_game/src/App.css">
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/Stars.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/numbers_game/src/index.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="37" column="75" selection-start-line="37" selection-start-column="75" selection-end-line="37" selection-end-column="75" />
         </state>
       </provider>
     </entry>

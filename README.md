@@ -20,15 +20,22 @@ about the users
 
 
 ### Numbers_Game Final Project
-- The purpose of the game is to allow users to click from the list of numbers
-with the objective to click on one more more numbers that add up to the target
-number. The UI will keep showing new target numbers until all numbers have been
-used. If the user experiences a case where the remaining numbers don't add up
-to the target number, then they are allowed the ability to refresh their target
-number up to 5 times.
+- Description: The purpose of the game is to allow users to click from the list
+of numbers with the objective to click on one more more numbers that add up to
+the target number. The UI will keep showing new target numbers until all
+numbers have been used. If the user experiences a case where the remaining
+numbers don't add up to the target number, then they are allowed the ability to
+refresh their target number up to 5 times.
+- Functionality:
+  - Users can also change their minds about what numbers they have selected.
+  - UI will not allow users to select a number more than once
+  - UI will ensure that numbers have to be selected before checking an answer
+  - Verification is done to also notify user of win or loss
 - Used Bootstrap, Font Awesome and CSS to build layout of the UI for the game
 - 5 Components: Game, Numbers, Stars, Button, Answer
-![Final Product](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct.png)
+![Start Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct1.png)
+![Win Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct2.png)
+![Lose Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png)
 
 
 ### Questions:
