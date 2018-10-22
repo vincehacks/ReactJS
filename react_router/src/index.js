@@ -1,12 +1,19 @@
+// Created by Vince Chang
+
+/* Function: render
+ * Description: This function will render the actual app wrapped with the
+ * BrowserRouter component that will act as the router for the whole app. It is
+ * good to wrap the app because I can interchange the router type as I see fit.
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render((
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+  ), document.getElementById('root'));
