@@ -1,14 +1,13 @@
 // Created by Vince Chang
 
-/* Function: render
- * Description: This function will render 
- */
-   
 import React from 'react';
 
+/* Function: Home
+ * Description: This function will render a simple title to the homepage.
+ */
 const Home = () => (
   <div>
-    <h1>Welcome to Tiger's Football Website</h1>
+    <h1>Welcome to Tigers Football Website</h1>
   </div>
 )
 

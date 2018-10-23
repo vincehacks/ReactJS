@@ -1,12 +1,11 @@
 // Created by Vince Chang
 
-/* Function: Header
- * Description: This function will create the url links to each route.
- */
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/* Function: Header
+ * Description: This function will create the url links to each route.
+ */
 const Header = () => (
   <header>
     <nav>
