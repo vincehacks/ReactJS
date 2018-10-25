@@ -7,7 +7,7 @@ import React from 'react';
  */
 const Home = () => (
   <div>
-    <h1>Welcome to Tigers Football Website</h1>
+    <h1>Welcome to San Francisco 49ers Football</h1>
   </div>
 )
 

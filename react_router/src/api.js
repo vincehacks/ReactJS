@@ -1,14 +1,17 @@
-// A simple data API that will be used to get the data for our
-// components. On a real website, a more robust data fetching
-// solution would be more appropriate.
+// Created by Vince Chang
+
+/* A simple data API that will be used to get the data for our components.
+ * On a real website, a more robust data fetching solution would be more
+ * appropriate.
+ */
 const PlayerAPI = {
   players: [
-    { number: 1, name: "Ben Blocker", position: "G" },
-    { number: 2, name: "Dave Defender", position: "D" },
-    { number: 3, name: "Sam Sweeper", position: "D" },
-    { number: 4, name: "Matt Midfielder", position: "M" },
-    { number: 5, name: "William Winger", position: "M" },
-    { number: 6, name: "Fillipe Forward", position: "F" }
+    { number: 80, name: "Jerry Rice", position: "WR" },
+    { number: 16, name: "Joe Montana", position: "QB" },
+    { number: 81, name: "Terrel Owens", position: "WR" },
+    { number: 21, name: "Frank Gore", position: "RB" },
+    { number: 52, name: "Patrick Willis", position: "LB" },
+    { number: 7, name: "Colin Kaepernick", position: "QB" }
   ],
   all: function() { return this.players},
   get: function(id) {

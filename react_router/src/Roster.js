@@ -8,6 +8,10 @@ import Player from './Player';
 /* Function: Roster
  * Description: This function will render either a FullRoster component or a
  * player component depending on the route.
+ *
+ * The :number part of the path /roster/:number means that the part of the
+ * pathname that comes after /roster/ will be captured and stored as
+ * match.params.number (value is stored as a string!)
  */
 const Roster = () => (
   <Switch>
