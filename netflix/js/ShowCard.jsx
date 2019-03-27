@@ -1,14 +1,19 @@
+// @flow
+
 import React from 'react';
 import {string} from 'prop-types';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link: any)`
   width: 32%;
   border: 2px solid #333;
   border-radius: 4px;
   margin-bottom: 25px;
   padding-right: 10px;
   overflow: hidden;
+  color: black;
+  text-decoration: none;
 `;
 
 const Image = styled.img`
@@ -17,8 +22,8 @@ const Image = styled.img`
   margin-right: 10px;
 `;
 
-const ShowCard = props => (
-  <Wrapper>
+const ShowCard = (props) => (
+  <Wrapper to={`/details/${props.imdbID}`}>
     <Image alt={`${props.title} Show poster`} src={`/public/img/posters/${props.poster}`}/>
     <div>
       <h3>{props.title}</h3>
@@ -32,6 +37,7 @@ ShowCard.propTypes = {
   poster: string.isRequired,
   title: string.isRequired,
   year: string.isRequired,
-  description: string.isRequired
+  description: string.isRequired,
+  imdbID: string.isRequired
 }
 export default ShowCard;
