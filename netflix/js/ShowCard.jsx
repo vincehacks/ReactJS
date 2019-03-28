@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React,{Component} from 'react';
 import {string} from 'prop-types';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
@@ -22,16 +22,24 @@ const Image = styled.img`
   margin-right: 10px;
 `;
 
-const ShowCard = (props) => (
-  <Wrapper to={`/details/${props.imdbID}`}>
-    <Image alt={`${props.title} Show poster`} src={`/public/img/posters/${props.poster}`}/>
-    <div>
-      <h3>{props.title}</h3>
-      <h3>({props.year})</h3>
-      <p>{props.description}</p>
-    </div>
-  </Wrapper>
-);
+class ShowCard extends Component {
+  shouldComponentUpdate() {
+    return false;
+  }
+  props: {poster: string, title: string, year: string, description: string, imdbID: string}
+  render () {
+    return (
+      <Wrapper to={`/details/${this.props.imdbID}`}>
+        <Image alt={`${this.props.title} Show poster`} src={`/public/img/posters/${this.props.poster}`}/>
+        <div>
+          <h3>{this.props.title}</h3>
+          <h3>({this.props.year})</h3>
+          <p>{this.props.description}</p>
+        </div>
+      </Wrapper>
+    );
+  }
+};
 
 ShowCard.propTypes = {
   poster: string.isRequired,
