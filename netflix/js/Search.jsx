@@ -25,7 +25,7 @@ const Search =(props: {
 );
 
 const mapStateToProps = (state) => ({
-  searchTerm: state.searchTer m
+  searchTerm: state.searchTerm
 })
 
 
