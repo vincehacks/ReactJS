@@ -1,14 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const config = {
   context: __dirname,
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './js/ClientApp.jsx'
-  ],
+  entry: ['./js/ClientApp.jsx'],
   devtool: "cheap-eval-source-map",
   output: {
     path: path.join(__dirname, 'public'),
@@ -47,3 +42,11 @@ module.exports = {
     ]
   }
 }
+
+if(process.env.NODE_ENV ==='production'){
+  config.entry = './js/ClientApp.jsx'
+  config.devtool = false
+  config.plugins = [];
+
+}
+module.exports = config;

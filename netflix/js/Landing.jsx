@@ -16,7 +16,7 @@ class Landing extends Component {
     return(
       <div className='landing'>
         <h1>Vinces Netflix</h1>
-        <form onSumbit={this.goToSearch}>
+        <form onSubmit={this.goToSearch}>
           <input onChange={this.props.handleSearchTermChange} value={this.props.searchTerm} type='text' placeholder='Search'/>
         </form>
         <Link to='/search'>or Browse all</Link>
