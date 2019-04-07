@@ -2,11 +2,13 @@
 
 import reducers from '../reducers';
 
+// Testing entering a value in the search field
 test('SET_SEARCH_TERM', () => {
   const state = reducers({searchTerm:'',apiData:{}}, {type:'SET_SEARCH_TERM',payload:'black'});
   expect(state).toEqual({searchTerm:'black',apiData:{}});
 });
 
+// Testing API retrevial
 test('ADD_API_DATA', () => {
   const state = reducers({searchTerm:'',
   apiData:{}}, {type:'ADD_API_DATA',payload:{rating:'1.7',

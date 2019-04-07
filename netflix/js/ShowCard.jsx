@@ -48,4 +48,5 @@ ShowCard.propTypes = {
   description: string.isRequired,
   imdbID: string.isRequired
 }
+
 export default ShowCard;

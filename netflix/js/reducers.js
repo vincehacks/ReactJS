@@ -1,4 +1,5 @@
 // @flow
+// THis file is for redux
 
 import {combineReducers} from 'redux';
 import {SET_SEARCH_TERM, ADD_API_DATA} from './actions';

@@ -43,6 +43,7 @@ const config = {
   }
 }
 
+// For production
 if(process.env.NODE_ENV ==='production'){
   config.entry = './js/ClientApp.jsx'
   config.devtool = false

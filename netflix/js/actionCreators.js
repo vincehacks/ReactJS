@@ -1,4 +1,6 @@
 // @flow
+// This file is used for redux, imports constants from actions.js and returns
+// a type of action and its expected payload
 
 import axios from 'axios';
 import {SET_SEARCH_TERM, ADD_API_DATA} from './actions';

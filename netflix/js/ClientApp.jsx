@@ -5,9 +5,6 @@ import {render} from 'react-dom';
 import {BrowserRouter} from 'react-router-dom';
 import App from './App';
 
-// window.Perf = Perf;
-// Perf.start();
-
 const renderApp = () => {
   render(
     <BrowserRouter>

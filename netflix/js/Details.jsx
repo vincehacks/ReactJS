@@ -6,7 +6,6 @@ import {getAPIDetails} from './actionCreators';
 import Header from './Header';
 import Spinner from './Spinner';
 
-
 class Details extends Component  {
   componentDidMount(){
     if(!this.props.rating){
@@ -66,4 +65,3 @@ const mapDispatchToProps = (dispatch: Function, ownProps) => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Details);
-

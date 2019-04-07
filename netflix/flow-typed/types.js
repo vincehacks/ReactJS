@@ -1,7 +1,14 @@
 // @flow
 
-export type Show = {title: string, description: string, year: string, imdbID: string,
-trailer: string, poster: string, rating?: string};
+export type Show = {
+  title: string,
+  description: string,
+  year: string,
+  imdbID: string,
+  trailer: string,
+  poster: string,
+  rating?: string
+};
 
 declare var module: {
   hot: {
@@ -11,6 +18,7 @@ declare var module: {
 
 declare type ActionType = 'SET_SEARCH_TERM' | 'ADD_API_DATA';
 
+// | syntax needed to understand "made-up types" A & P
 declare type ActionT<A: ActionType, P> = {|
   type: A,
   payload: P

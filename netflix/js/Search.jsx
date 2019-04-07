@@ -5,10 +5,6 @@ import {connect} from 'react-redux';
 import ShowCard from './ShowCard';
 import Header from './Header'
 
-// Exported this to types.js
-// type Show = {title: string, description: string, year: string, imdbID: string,
-// trailer: string, poster: string};
-
 const Search =(props: {
   searchTerm: string, // eslint-disable-line react/no-unused-prop-types
   shows: Array<Show>}) => (
