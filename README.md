@@ -38,6 +38,17 @@ refresh their target number up to 5 times.
 ![Lose Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png)
 
 
+### Netflix
+- Description: This app was built to reflect what Netflix would look like. Tech
+Stack was React, ES6, CSS5, along with Jest testing.
+- Functionality:
+  - Users can search for a show and see only hits for that search
+  - Can click on a show card and view details about that show
+![Landing](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png)
+![Shows](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct2.png)
+![Search](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png)
+
+
 ### Questions:
     1. When should I use `extends component`? Instead of extend React.Component
        - They are the same!
