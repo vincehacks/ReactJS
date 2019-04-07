@@ -26,7 +26,7 @@ const Header = (props: {showSearch?: boolean, handleSearchTermChange: Function, 
   <header>
     <h1>
       <Link to='/'>
-       Vince Netflix
+       Vinces Netflix
       </Link>
     </h1>
   {utilSpace}
