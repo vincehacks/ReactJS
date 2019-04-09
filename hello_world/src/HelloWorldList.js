@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
-import './HelloWorldList.css';
-import HelloWorld from './HelloWorld';
-import AddGreeter from './AddGreeter';
+// Created by Vince Chang
+
+import React, { Component } from "react";
+import "./HelloWorldList.css";
+import HelloWorld from "./HelloWorld";
+import AddGreeter from "./AddGreeter";
 
 class HelloWorldList extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {greetings: ['VINCE','CHANG',"AHMA"]};
+    this.state = { greetings: ["VINCE", "CHANG", "AHMA"] };
     // Passing down the addGreeting function
     this.addGreeting = this.addGreeting.bind(this);
     this.removeGreeting = this.removeGreeting.bind(this);
@@ -16,24 +17,24 @@ class HelloWorldList extends Component {
   // Helper function that will return a list of JSX components
   renderGreetings() {
     return this.state.greetings.map(name => (
-      <HelloWorld key={name} name={name} removeGreeting={this.removeGreeting}/>
+      <HelloWorld key={name} name={name} removeGreeting={this.removeGreeting} />
     ));
   }
 
   // This function will add the new name to the greetings list
-  addGreeting(newName){
+  addGreeting(newName) {
     // This is how to do an append shortcut, keep original array the same then
     // add newName to the end of it
-    this.setState({greetings: [...this.state.greetings, newName]});
+    this.setState({ greetings: [...this.state.greetings, newName] });
   }
 
   // This function will remove a name from the greetings HelloWorldList
   // The filter will return back a list that excludes the name we are removing!
-  removeGreeting(removeName){
-    const filteredGreetings = this.state.greetings.filter(name=>{
+  removeGreeting(removeName) {
+    const filteredGreetings = this.state.greetings.filter(name => {
       return name !== removeName;
     });
-    this.setState({greetings: filteredGreetings});
+    this.setState({ greetings: filteredGreetings });
   }
 
   // Render with out the renderGreetings()
@@ -48,9 +49,9 @@ class HelloWorldList extends Component {
 
   // Render with function call
   render() {
-    return(
+    return (
       <div className="HelloWorldList">
-        <AddGreeter addGreeting={this.addGreeting}/>
+        <AddGreeter addGreeting={this.addGreeting} />
         {this.renderGreetings()}
       </div>
     );

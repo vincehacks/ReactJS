@@ -1,18 +1,17 @@
+// Created by Vince Chang
+
 // Importing the react library from the npm module
-import React, {Component} from 'react';
-import './HelloWorld.css';
+import React, { Component } from "react";
+import "./HelloWorld.css";
 
 // const HelloWorld = (props) => {
 //   return (<div className="HelloWorld">Hello {props.name}!</div>);
 // };
 
-
 class HelloWorld extends Component {
-
-  // Constructor
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {greeting: "Hello "};
+    this.state = { greeting: "Hello " };
     // This tells JavaScript that any time I see 'this' in chineseify, I want
     // you to refer to ME!
     this.chineseify = this.chineseify.bind(this);
@@ -20,25 +19,25 @@ class HelloWorld extends Component {
   }
 
   // Method that handles the onClick
-  chineseify(){
+  chineseify() {
     // You can't modify the state inside a class, so need to use this.setState
     // to do it for me. ex. can't do greeting = "Ni hao"
-    this.setState({greeting: "Ni Hao "});
+    this.setState({ greeting: "Ni Hao " });
   }
 
   // Method that will remove a greeting from the props that was passed in!
-  removeGreeting(){
+  removeGreeting() {
     this.props.removeGreeting(this.props.name);
   }
 
-  render(){
+  render() {
     return (
       // this.props.name will come from only this current class, not parent's
-      <div className='HelloWorld'>
+      <div className="HelloWorld">
         {this.state.greeting} {this.props.name}!
-        <br/>
+        <br />
         <button onClick={this.chineseify}>Chineseify!</button>
-        <br/>
+        <br />
         <button onClick={this.removeGreeting}>Remove Me!</button>
       </div>
     );

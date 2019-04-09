@@ -1,9 +1,10 @@
 // Created by Vince Chang
 
-import React, {Component} from 'react';
+import React, { Component } from "react";
 
 class Form extends Component {
-  state = {userName: ''}
+  // Defualt state, so it shows empty in the input field
+  state = { userName: "" };
 
   /* Function: handleSubmit
    * Description: This function will be the handler for when a user hits the
@@ -11,7 +12,7 @@ class Form extends Component {
    * if a profile is found, it will return information about that profile as a
    * response
    */
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
     console.log("Event: Form submit", this.state.userName);
 
@@ -25,7 +26,7 @@ class Form extends Component {
       .then(this.props.onSubmit);
 
     // Resets the input field to blank
-    this.setState({userName: ''});
+    this.setState({ userName: "" });
   };
 
   /* Function: render
@@ -34,12 +35,17 @@ class Form extends Component {
    */
   render() {
     return (
-      <form onSubmit={this.handleSubmit}
-        style={{display: 'inline-block', marginLeft: 60, marginTop: 70}}>
-        <input type="text"
-           value={this.state.userName}
-           onChange={(event) => this.setState({userName: event.target.value})}
-           placeholder="Github username" required/>
+      <form
+        onSubmit={this.handleSubmit}
+        style={{ display: "inline-block", marginLeft: 60, marginTop: 70 }}
+      >
+        <input
+          type="text"
+          value={this.state.userName}
+          onChange={event => this.setState({ userName: event.target.value })}
+          placeholder="Github username"
+          required
+        />
         <button type="submit"> Add Card</button>
       </form>
     );
