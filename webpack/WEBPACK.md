@@ -19,7 +19,7 @@ Created by Vince Chang </br>
 #### Modules
 
 - Modules were introduced so that script **encapsulation** can be bundled by a module
-  \_ Modules can be loaded easily and also have **dependencies** that will ensure some scripts are loaded before others in the correct order.
+- Modules can be loaded easily and also have **dependencies** that will ensure some scripts are loaded before others in the correct order.
 
 #### The Solution
 
