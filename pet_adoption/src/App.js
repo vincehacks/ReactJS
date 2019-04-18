@@ -6,11 +6,37 @@ import pf from "petfinder-client";
 const petFinder = pf({});
 
 class App extends React.Component {
+  constructor(props) {
+    // This calls React.Component's constructor and passes the props of there
+    //so react knows how to track the props
+    super(props);
+    this.state = { pets: [] };
+  }
   componentDidMount() {
     // This will go out to the API and return a promise
-    const promise = petFinder.breed.list({ animal: "dog" });
+    petFinder.pet
+      .find({ output: "full", location: "San Francisco, CA" })
+      .then(data => {
+        let pets;
 
-    promise.then(console.log, console.error);
+        console.log(data);
+        // if (data.petFinder.pets && data.petFinder.pets.pet) {
+        //   // Multiple animals
+        //   if (Array.isArray(data.petFinder.pets.pet)) {
+        //     pets = data.petFinder.pets.pet;
+        //   } else {
+        //     // One animal
+        //     pets = [data.petFinder.pets.pet];
+        //   }
+        // } else {
+        //   // No animals
+        //   pets = [];
+        // }
+        //
+        // this.setState({
+        //   pets: pets
+        // });
+      });
   }
   render() {
     // This is the long way to using React.createElement
@@ -41,6 +67,9 @@ class App extends React.Component {
     // Short way by using JSX
     return (
       <div>
+        <pre>
+          <code>{JSON.stringify(this.state, null, 4)}</code>
+        </pre>
         <h1>Pet Adoption</h1>
         <Pet name="JayJay" animal="dog" breed="Chihuahua" />
         <Pet name="Juelz" animal="dog" breed="Chihuahua" />

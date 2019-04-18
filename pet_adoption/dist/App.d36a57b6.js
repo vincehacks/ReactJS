@@ -46445,20 +46445,46 @@ var App =
 function (_React$Component) {
   _inherits(App, _React$Component);
 
-  function App() {
+  function App(props) {
+    var _this;
+
     _classCallCheck(this, App);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(App).apply(this, arguments));
+    // This calls React.Component's constructor and passes the props of there
+    //so react knows how to track the props
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
+    _this.state = {
+      pets: []
+    };
+    return _this;
   }
 
   _createClass(App, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       // This will go out to the API and return a promise
-      var promise = petFinder.breed.list({
-        animal: "dog"
+      petFinder.pet.find({
+        output: "full",
+        location: "San Francisco, CA"
+      }).then(function (data) {
+        var pets;
+        console.log(data); // if (data.petFinder.pets && data.petFinder.pets.pet) {
+        //   // Multiple animals
+        //   if (Array.isArray(data.petFinder.pets.pet)) {
+        //     pets = data.petFinder.pets.pet;
+        //   } else {
+        //     // One animal
+        //     pets = [data.petFinder.pets.pet];
+        //   }
+        // } else {
+        //   // No animals
+        //   pets = [];
+        // }
+        //
+        // this.setState({
+        //   pets: pets
+        // });
       });
-      promise.then(console.log, console.error);
     }
   }, {
     key: "render",
@@ -46487,7 +46513,7 @@ function (_React$Component) {
       //   })
       // ]);
       // Short way by using JSX
-      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Pet Adoption"), _react.default.createElement(_Pet.default, {
+      return _react.default.createElement("div", null, _react.default.createElement("pre", null, _react.default.createElement("code", null, JSON.stringify(this.state, null, 4))), _react.default.createElement("h1", null, "Pet Adoption"), _react.default.createElement(_Pet.default, {
         name: "JayJay",
         animal: "dog",
         breed: "Chihuahua"
@@ -46556,7 +46582,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64395" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49423" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
