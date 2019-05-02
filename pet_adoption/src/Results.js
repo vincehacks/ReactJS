@@ -12,6 +12,8 @@ class Results extends React.Component {
     //so react knows how to track the props
     super(props);
     this.state = { pets: [] };
+
+    this.search = this.search.bind(this);
   }
   componentDidMount() {
     this.search();
