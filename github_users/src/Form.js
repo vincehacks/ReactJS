@@ -3,7 +3,7 @@
 import React, { Component } from "react";
 
 class Form extends Component {
-  // Defualt state, so it shows empty in the input field
+  // Default state, so it shows empty in the input field
   state = { userName: "" };
 
   /* Function: handleSubmit

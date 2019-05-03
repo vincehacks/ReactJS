@@ -54,6 +54,7 @@ Stack was React, ES6, CSS5, along with Jest testing.
 - Functionality:
   - Users can search for different types of pets by location, animal and breed
   - Can also choose to adopt a pet and read details about that pet
+- Stack: React16, Parcel (alt to webpack)
 ![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
 ![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
 ![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
@@ -89,7 +90,6 @@ Stack was React, ES6, CSS5, along with Jest testing.
        it would be confusing as to which component to use/import
     10.!== compares both type and value and != just compares value
     11. Explain the this.function.bind(this) in the parent’s constructor
-
 
 
 
