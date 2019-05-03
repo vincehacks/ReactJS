@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React from "react";
 import pf from "petfinder-client";
 import Carousel from "./Carousel";
@@ -8,6 +10,7 @@ const petfinder = pf({});
 class Details extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       loading: true,
       showModal: false

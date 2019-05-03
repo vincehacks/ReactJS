@@ -1,16 +1,21 @@
+// Created by Vince Chang
+
 import React from "react";
 import { Link } from "@reach/router";
 
 class Pet extends React.Component {
   render() {
-    // Destructing an object so I can refer to the prop passed in
+    // Destructing an object so I can refer to the props passed in
     const { name, animal, breed, media, location, id } = this.props;
+
     let photos = [];
 
-    // If filter is true, it stays in the array, if filter is false, it is kicked out of the array
+    // If filter is true, it stays in the array, if filter is false, it is
+    // kicked out of the array
     if (media && media.photos && media.photos.photo) {
       photos = media.photos.photo.filter(photo => photo["@size"] == "pn");
     }
+
     return (
       <Link to={`/details/${id}`} className="pet">
         <div className="image-container">

@@ -1,8 +1,11 @@
+// Created by Vince Chang
+
 import React from "react";
 
 class Carousel extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       photos: [],
       active: 0
@@ -13,11 +16,11 @@ class Carousel extends React.Component {
 
   // New component life cycle method, everytime props change, this is run so
   // state can be updated. This is static because it will just take props and
-  // return back some state and can call like Carousel.getDerivedStateFromProps
+  // return back some state and can call Carousel.getDerivedStateFromProps
   static getDerivedStateFromProps({ media }) {
     let photos = [];
 
-    // Returns you an array of just photos that have pn as their size
+    // Returns you an array of photos that have pn as their size
     if (media && media.photos && media.photos.photo) {
       photos = media.photos.photo.filter(photo => photo["@size"] === "pn");
     }

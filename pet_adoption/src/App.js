@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Link } from "@reach/router";
@@ -26,13 +28,11 @@ class App extends React.Component {
       getBreeds: this.getBreeds
     };
   }
-  // Update Location
   handleLocationChange(event) {
     this.setState({
       location: event.target.value
     });
   }
-  // Update Animal they want to search
   handleAnimalChange(event) {
     this.setState(
       {
@@ -42,7 +42,6 @@ class App extends React.Component {
       this.getBreeds
     );
   }
-  // Update the breed per animal
   handleBreedChange(event) {
     this.setState({
       breed: event.target.value

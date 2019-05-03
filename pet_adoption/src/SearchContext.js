@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React from "react";
 
 // This class is created to get the location, animal and breed from search

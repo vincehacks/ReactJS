@@ -49013,6 +49013,7 @@ var _react = _interopRequireDefault(require("react"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Created by Vince Chang
 // This class is created to get the location, animal and breed from search
 // params page in order to get it to results for searching purposes
 // New React Method that creates 2 components
@@ -49080,7 +49081,7 @@ function (_React$Component) {
   _createClass(Pet, [{
     key: "render",
     value: function render() {
-      // Destructing an object so I can refer to the prop passed in
+      // Destructing an object so I can refer to the props passed in
       var _this$props = this.props,
           name = _this$props.name,
           animal = _this$props.animal,
@@ -49088,7 +49089,8 @@ function (_React$Component) {
           media = _this$props.media,
           location = _this$props.location,
           id = _this$props.id;
-      var photos = []; // If filter is true, it stays in the array, if filter is false, it is kicked out of the array
+      var photos = []; // If filter is true, it stays in the array, if filter is false, it is
+      // kicked out of the array
 
       if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
@@ -49181,7 +49183,7 @@ function (_React$Component) {
   _createClass(SearchBox, [{
     key: "handleFormSubmit",
     value: function handleFormSubmit(event) {
-      // Have to do so the form doesn't actually submit
+      // preventDefault is so that form doesn't actually submit to server
       event.preventDefault();
       this.props.search();
     }
@@ -49309,14 +49311,15 @@ function (_React$Component) {
     value: function search() {
       var _this2 = this;
 
-      // This will go out to the API and return a promise
+      // This will go out to the petfinder API and return a promise
       petFinder.pet.find({
         output: "full",
         location: this.props.searchParams.location,
         animal: this.props.searchParams.animal,
         breed: this.props.searchParams.breed
       }).then(function (data) {
-        var pets;
+        var pets; // Printing the data to the console for debugging
+
         console.log(data);
 
         if (data.petfinder.pets && data.petfinder.pets.pet) {
@@ -49340,29 +49343,6 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      // This is the long way to using React.createElement
-      // return React.createElement("div", {}, [
-      //   React.createElement(
-      //     "h1",
-      //     { onClick: this.handleTitleClick },
-      //     "Pet Adpotion"
-      //   ),
-      //   React.createElement(Pet, {
-      //     name: "JayJay",
-      //     animal: "dog",
-      //     breed: "Chihuahua"
-      //   }),
-      //   React.createElement(Pet, {
-      //     name: "Juelz",
-      //     animal: "dog",
-      //     breed: "Chihuahua"
-      //   }),
-      //   React.createElement(Pet, {
-      //     name: "Hanz",
-      //     animal: "dog",
-      //     breed: "German Shepard"
-      //   })
-      // ]);
       // Short way by using JSX
       return _react.default.createElement("div", {
         className: "search"
@@ -49391,7 +49371,30 @@ function (_React$Component) {
   }]);
 
   return Results;
-}(_react.default.Component); // FUNCTIONAL COMPONENT EQUIVALENT!
+}(_react.default.Component); // This is the long way to using React.createElement
+// return React.createElement("div", {}, [
+//   React.createElement(
+//     "h1",
+//     { onClick: this.handleTitleClick },
+//     "Pet Adpotion"
+//   ),
+//   React.createElement(Pet, {
+//     name: "JayJay",
+//     animal: "dog",
+//     breed: "Chihuahua"
+//   }),
+//   React.createElement(Pet, {
+//     name: "Juelz",
+//     animal: "dog",
+//     breed: "Chihuahua"
+//   }),
+//   React.createElement(Pet, {
+//     name: "Hanz",
+//     animal: "dog",
+//     breed: "German Shepard"
+//   })
+// ]);
+// FUNCTIONAL COMPONENT EQUIVALENT!
 // const App = () => {
 //   return React.createElement("div", {}, [
 //     React.createElement("h1", {}, "Pet Adpotion"),
@@ -49470,7 +49473,7 @@ function (_React$Component) {
     return _this;
   } // New component life cycle method, everytime props change, this is run so
   // state can be updated. This is static because it will just take props and
-  // return back some state and can call like Carousel.getDerivedStateFromProps
+  // return back some state and can call Carousel.getDerivedStateFromProps
 
 
   _createClass(Carousel, [{
@@ -49513,7 +49516,7 @@ function (_React$Component) {
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(_ref) {
       var media = _ref.media;
-      var photos = []; // Returns you an array of just photos that have pn as their size
+      var photos = []; // Returns you an array of photos that have pn as their size
 
       if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
@@ -49783,6 +49786,7 @@ function (_React$Component) {
 
   _createClass(SearchParams, [{
     key: "handleSearchSubmit",
+    // Goes back to home page
     value: function handleSearchSubmit() {
       (0, _router.navigate)("/");
     }
@@ -49867,8 +49871,7 @@ function (_React$Component) {
       getBreeds: _this.getBreeds
     };
     return _this;
-  } // Update Location
-
+  }
 
   _createClass(App, [{
     key: "handleLocationChange",
@@ -49876,8 +49879,7 @@ function (_React$Component) {
       this.setState({
         location: event.target.value
       });
-    } // Update Animal they want to search
-
+    }
   }, {
     key: "handleAnimalChange",
     value: function handleAnimalChange(event) {
@@ -49885,8 +49887,7 @@ function (_React$Component) {
         animal: event.target.value,
         breed: ""
       }, this.getBreeds);
-    } // Update the breed per animal
-
+    }
   }, {
     key: "handleBreedChange",
     value: function handleBreedChange(event) {
@@ -49974,7 +49975,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58676" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49386" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React from "react";
 import Pet from "./Pet";
 import pf from "petfinder-client";
@@ -19,7 +21,7 @@ class Results extends React.Component {
     this.search();
   }
   search() {
-    // This will go out to the API and return a promise
+    // This will go out to the petfinder API and return a promise
     petFinder.pet
       .find({
         output: "full",
@@ -30,6 +32,7 @@ class Results extends React.Component {
       .then(data => {
         let pets;
 
+        // Printing the data to the console for debugging
         console.log(data);
 
         if (data.petfinder.pets && data.petfinder.pets.pet) {
@@ -51,31 +54,6 @@ class Results extends React.Component {
       });
   }
   render() {
-    // This is the long way to using React.createElement
-
-    // return React.createElement("div", {}, [
-    //   React.createElement(
-    //     "h1",
-    //     { onClick: this.handleTitleClick },
-    //     "Pet Adpotion"
-    //   ),
-    //   React.createElement(Pet, {
-    //     name: "JayJay",
-    //     animal: "dog",
-    //     breed: "Chihuahua"
-    //   }),
-    //   React.createElement(Pet, {
-    //     name: "Juelz",
-    //     animal: "dog",
-    //     breed: "Chihuahua"
-    //   }),
-    //   React.createElement(Pet, {
-    //     name: "Hanz",
-    //     animal: "dog",
-    //     breed: "German Shepard"
-    //   })
-    // ]);
-
     // Short way by using JSX
     return (
       <div className="search">
@@ -103,6 +81,31 @@ class Results extends React.Component {
     );
   }
 }
+
+// This is the long way to using React.createElement
+
+// return React.createElement("div", {}, [
+//   React.createElement(
+//     "h1",
+//     { onClick: this.handleTitleClick },
+//     "Pet Adpotion"
+//   ),
+//   React.createElement(Pet, {
+//     name: "JayJay",
+//     animal: "dog",
+//     breed: "Chihuahua"
+//   }),
+//   React.createElement(Pet, {
+//     name: "Juelz",
+//     animal: "dog",
+//     breed: "Chihuahua"
+//   }),
+//   React.createElement(Pet, {
+//     name: "Hanz",
+//     animal: "dog",
+//     breed: "German Shepard"
+//   })
+// ]);
 
 // FUNCTIONAL COMPONENT EQUIVALENT!
 // const App = () => {

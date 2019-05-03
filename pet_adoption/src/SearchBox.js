@@ -1,3 +1,5 @@
+// Created by Vince Chang
+
 import React from "react";
 import { ANIMALS } from "petfinder-client";
 import { Consumer } from "./SearchContext";
@@ -9,7 +11,7 @@ class SearchBox extends React.Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
   handleFormSubmit(event) {
-    // Have to do so the form doesn't actually submit
+    // preventDefault is so that form doesn't actually submit to server
     event.preventDefault();
     this.props.search();
   }
