@@ -49,6 +49,16 @@ Stack was React, ES6, CSS5, along with Jest testing.
 ![Search](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png)
 
 
+### Pet Adoption
+- Description: This app is used to adopt pets using the Petfinder API
+- Functionality:
+  - Users can search for different types of pets by location, animal and breed
+  - Can also choose to adopt a pet and read details about that pet
+![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
+![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
+![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
+
+
 ### Questions:
     1. When should I use `extends component`? Instead of extend React.Component
        - They are the same!
@@ -58,6 +68,7 @@ Stack was React, ES6, CSS5, along with Jest testing.
     3. Is className suppose to be a CSS class that you create yourself?
        - className is reserved
     4. When you render multiple components you need to have keys
+       - This will avoid the warning
     5. Show example of import and export components, do you separate components
        by file? Or is it better to have more than one component in the same
        file?
@@ -68,7 +79,7 @@ Stack was React, ES6, CSS5, along with Jest testing.
        function to it, we call super to initialize the the component.
     7. What does this.bind do and if you didn’t use it, what would 'this' refer
        to?
-       - If I didn’t bind it it would refer to the actual function that I'm
+       - If I didn’t bind it, it would refer to the actual function that I'm
        calling it in as oppose to the component itself
     8. Why do I have to export 'App'?
        - I have to import app to index.js (this is the entry point). create-
@@ -77,6 +88,9 @@ Stack was React, ES6, CSS5, along with Jest testing.
        - Tells exactly which component to use. If there were two+ components,
        it would be confusing as to which component to use/import
     10.!== compares both type and value and != just compares value
+    11. Explain the this.function.bind(this) in the parent’s constructor
+
+
 
 
 ### REACTJS CODECADEMY PART 1
@@ -285,12 +299,6 @@ calls `.render()` as soon as the state has changed.
 ### REACTJS CODECADEMY PART 2
 
 
-#### Questions:
-    1. Explain the this.function.bind(this) in the parent’s constructor
-    2. What is the className used for again
-       - To define class styles like in CSS
-
-
 #### Stateless Components Inherit From Stateful Components
   - If you want to pass a something to another component, you need to pass it
   in the file that gives something. AKA you need to have the child be rendered
@@ -458,13 +466,8 @@ DOM
 - Changes on the real DOM cause the screen to change.
 
 
-### PLURALSIGHT
-
-- React is a JS library not a framework
-- Helps build user interfaces
-- Does not follow MVC Model
-
 
 #### Components
 - States can be changed, but props can not be changed
 - Class components can only change their internal state, not their properties
+
