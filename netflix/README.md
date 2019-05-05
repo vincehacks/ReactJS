@@ -118,60 +118,43 @@ and scripts
 
 ### Questions:
     1. What happens when you don't bind an instance in the constructor of an
-    event handler? Are you still writing react code where you are doing
-    binding ? Looks like now React16  you don’t need to do it if you set up
-    babel.config
-       - 
+    event handler?
+       - When you call this.something, you are referring to the function that
+       "this" was called in. If you want it to refer to the App's function, then
+       you need to bind the function so it knows when "this" is referred to in
+       the actual function, it will refer to the App instead of the function it
+       was called in.
     2. Do you use flow or typescript & ES Lint/ recommend it?
-       -
+       - Typescript
     3. Do I need Ajax to make API calls? Where does Express fit in? Is this
     going to be called in componentDidMount?
-       - 
+       - Express is the middleware that can open the port between my app and the calling API, I communicate to Express and Express communicates to the
+       API
     4. What version of React should I be learning?
-       -
+       - Always the newest version, aka React 16
     5. Should I use a mix of functional components or class components?
-       -
-    6. Do we access history from the router? If so, what is an example use case
-       -
+       - Depends, no state use functional, state, use class
+    6. Explain JS String Literal = `${this.blah}`?
+       - It is like a placeholder and you can insert string from a function etc.
     7. Why do you have to say export default Component_name when wanting to
     export the component, what’s with the default?
-    - 
-    11. Fix CSS in Netflix, find out what the problem
+    - "import" & "export" are from ES6
 
+    Named exports - for example export function func() {} is a named export with the name of func. Named modules can be imported using import { exportName } from 'module';. In this case, the name of the import should be the same as the name of the export. To import the func in the example, you'll have to use import { func } from 'module';. There can be multiple named exports in one module.
 
+    Default export - is the value that will be imported from the module, if you use the simple import statement import X from 'module'. X is the name that will be given locally to the variable assigned to contain the value, and it doesn't have to be named like the origin export. There can be only one default export.
+
+    - [Explanation](https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default)
 
 ### Misc Questions:
     1. In hello_world how does index.html know about index.js
-       - 
-    2. Explain JS String Literal = `${this.blah}`?
-       -
-    3. In github_users why does app.js have the state of the cards, why can't
+       - The document.getElementById will know to look at the index.html
+    2. In github_users why does app.js have the state of the cards, why can't
     it just be cardlist.js that has this logic? Does the promise return the
     json for a github user?
-    4. Why isn't cardlist a react class component?
-    4. Why does <App> always hold the <Router>
+    3. Why isn't cardlist a react class component?
+    4. Why does <App> always hold the <Router> ?
     5. Why do label tags encapsulate an entire select and options or input?
-    6. How do you know when you need a state ? Pet.js doesn’t have state, but 
+    6. How do you know when you need a state ? Pet.js doesn’t have state, but
     everything else does
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    7. Fix CSS in Netflix, find out what the problem
