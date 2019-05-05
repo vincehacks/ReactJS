@@ -128,7 +128,8 @@ and scripts
        - Typescript
     3. Do I need Ajax to make API calls? Where does Express fit in? Is this
     going to be called in componentDidMount?
-       - Express is the middleware that can open the port between my app and the calling API, I communicate to Express and Express communicates to the
+       - Express is the middleware that can open the port between my app and
+       the calling API, I communicate to Express and Express communicates to the
        API
     4. What version of React should I be learning?
        - Always the newest version, aka React 16
@@ -140,9 +141,18 @@ and scripts
     export the component, what’s with the default?
     - "import" & "export" are from ES6
 
-    Named exports - for example export function func() {} is a named export with the name of func. Named modules can be imported using import { exportName } from 'module';. In this case, the name of the import should be the same as the name of the export. To import the func in the example, you'll have to use import { func } from 'module';. There can be multiple named exports in one module.
+    Named exports - for example export function func() {} is a named export
+    with the name of func. Named modules can be imported using import {
+    exportName } from 'module';. In this case, the name of the import should be
+    the same as the name of the export. To import the func in the example,
+    you'll have to use import { func } from 'module';. There can be multiple
+    named exports in one module.
 
-    Default export - is the value that will be imported from the module, if you use the simple import statement import X from 'module'. X is the name that will be given locally to the variable assigned to contain the value, and it doesn't have to be named like the origin export. There can be only one default export.
+    Default export - is the value that will be imported from the module, if you
+    use the simple import statement import X from 'module'. X is the name that
+    will be given locally to the variable assigned to contain the value, and it
+    doesn't have to be named like the origin export. There can be only one
+    default export.
 
     - [Explanation](https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default)
 

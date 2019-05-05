@@ -64,7 +64,9 @@ All of my ReactJS code, exercises, and notes will be found here.
 ### Questions:
 
     1. When should I use `extends Component`? Instead of extend React.Component
-       - They are ideally the same, but {Component} will just import the Component itself and not the whole Library itself. Rule of thumb, is import only the things you need.
+       - They are ideally the same, but {Component} will just import the
+       Component itself and not the whole Library itself. Rule of thumb, is
+       import only the things you need.
     2. Where do you need to call ReactDOM.render() ? Every file or just in the
        main?
        - Just in the main, the <App> container
