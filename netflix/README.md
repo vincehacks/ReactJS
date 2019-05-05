@@ -154,7 +154,7 @@ and scripts
     doesn't have to be named like the origin export. There can be only one
     default export.
 
-    - [Explanation](https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default)
+- [Explanation](https://stackoverflow.com/questions/31852933/why-es6-react-component-works-only-with-export-default)
 
 ### Misc Questions:
     1. In hello_world how does index.html know about index.js
