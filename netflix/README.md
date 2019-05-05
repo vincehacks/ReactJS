@@ -124,19 +124,25 @@ and scripts
        you need to bind the function so it knows when "this" is referred to in
        the actual function, it will refer to the App instead of the function it
        was called in.
+
     2. Do you use flow or typescript & ES Lint/ recommend it?
        - Typescript
+
     3. Do I need Ajax to make API calls? Where does Express fit in? Is this
     going to be called in componentDidMount?
        - Express is the middleware that can open the port between my app and
        the calling API, I communicate to Express and Express communicates to the
        API
+
     4. What version of React should I be learning?
        - Always the newest version, aka React 16
+
     5. Should I use a mix of functional components or class components?
        - Depends, no state use functional, state, use class
+
     6. Explain JS String Literal = `${this.blah}`?
        - It is like a placeholder and you can insert string from a function etc.
+       
     7. Why do you have to say export default Component_name when wanting to
     export the component, what’s with the default?
     - "import" & "export" are from ES6
