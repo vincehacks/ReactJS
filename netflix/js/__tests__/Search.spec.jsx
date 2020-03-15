@@ -66,15 +66,15 @@ test('Search should render correct number of shows', () => {
  * with 'black' as the searchWord
  * So 2 = 2
    ========================================================================= */
-test('Search should render correct number of shows', () => {
-  const searchWord = 'black';
-  const component = shallow(<Search shows={preload.shows} />);
-  component.find('input').simulate('change', { target: { value: searchWord } });
-  const showCount = preload.shows.filter(
-    show =>
-      `${show.title} ${show.description}`
-        .toUpperCase()
-        .indexOf(searchWord.toUpperCase()) >= 0
-  ).length;
-  expect(component.find(ShowCard).length).toEqual(showCount);
-});
+// test('Search should render correct number of shows when searching black',() => {
+//   const searchWord = 'black';
+//   const component = shallow(<Search shows={preload.shows} />);
+//   component.find('input').simulate('change', { target: { value: searchWord } });
+//   const showCount = preload.shows.filter(
+//     show =>
+//       `${show.title} ${show.description}`
+//         .toUpperCase()
+//         .indexOf(searchWord.toUpperCase()) >= 0
+//   ).length;
+//   expect(component.find(ShowCard).length).toEqual(showCount);
+// });

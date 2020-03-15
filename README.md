@@ -42,7 +42,7 @@ All of my ReactJS code, exercises, and notes will be found here.
 ### Netflix
 
 - Description: This app was built to reflect what Netflix would look like. Tech
-  Stack was React, ES6, CSS5, along with Jest testing.
+  Stack was React, ES6, JSX, CSS5, Node, Babel, Webpack, along with Jest for testing.
 - Functionality:
   - Users can search for a show and see only hits for that search
   - Can click on a show card and view details about that show
