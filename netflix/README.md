@@ -1,5 +1,11 @@
 ### Vince's Netflix Notes
 
+#### Tech Stack
+- Dependency Managment: Yarn
+- Dynamic Routing: React Router
+- Styles: CSS File & mix of Styled Components
+- API Communication: Axios, Express, NodeJS
+- State Management: Redux
 
 #### React & ReactDOM
 - React is split into 2 parts on purpose (react and react-dom)
