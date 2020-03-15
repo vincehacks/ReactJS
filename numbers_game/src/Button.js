@@ -1,5 +1,5 @@
 // Created by Vince Chang
-   
+
 import React from 'react';
 
 /* Function: Button
@@ -7,35 +7,39 @@ import React from 'react';
  * to check their answer to the game.
  * 3 cases: Answer is true, false, and default case where nothing is selected
  */
-const Button = (props) => {
+const Button = props => {
   let button;
   switch (props.answerIsCorrect) {
     case true:
-        button =
-          <button className="btn btn-success" onClick={props.acceptAnswer}>
-            <i className="fa fa-check"></i>
-          </button>;
+      button = (
+        <button className="btn btn-success" onClick={props.acceptAnswer}>
+          <i className="fa fa-check"></i>
+        </button>
+      );
       break;
     case false:
-      button =
+      button = (
         <button className="btn btn-danger">
           <i className="fa fa-times"></i>
-        </button>;
+        </button>
+      );
       break;
     default:
-      button =
+      button = (
         <button
           disabled={props.selectedNumbers.length === 0}
-          onClick={props.checkAnswer}>
-         =
-        </button>;
+          onClick={props.checkAnswer}
+        >
+          =
+        </button>
+      );
       break;
   }
-  return(
+  return (
     <div className="col-2">
       {button}
-      <br/>
-      <br/>
+      <br />
+      <br />
       <button className="btn btn-warning" disabled={props.numOfRedraws === 0}>
         <i className="fa fa-refresh" onClick={props.redraw}>
           REDRAW: {props.numOfRedraws}
@@ -43,6 +47,6 @@ const Button = (props) => {
       </button>
     </div>
   );
-}
+};
 
 export default Button;

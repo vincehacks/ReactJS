@@ -1,13 +1,13 @@
 // Created by Vince Chang
 
-import React from "react";
-import SearchBox from "./SearchBox";
-import { navigate } from "@reach/router";
+import React from 'react';
+import SearchBox from './SearchBox';
+import { navigate } from '@reach/router';
 
 class SearchParams extends React.Component {
   // Goes back to home page
   handleSearchSubmit() {
-    navigate("/");
+    navigate('/');
   }
   render() {
     return (

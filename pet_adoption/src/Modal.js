@@ -1,16 +1,16 @@
 // Created by Vince Chang
 
-import React from "react";
-import { createPortal } from "react-dom";
+import React from 'react';
+import { createPortal } from 'react-dom';
 
-const modalRoot = document.getElementById("modal");
+const modalRoot = document.getElementById('modal');
 
 class Modal extends React.Component {
   constructor(props) {
     super(props);
 
     // This is a div that will be injected into Modal located in index.html
-    this.el = document.createElement("div");
+    this.el = document.createElement('div');
   }
 
   componentDidMount() {

@@ -1,7 +1,7 @@
 // Created by Vince Chang
 
-import React from "react";
-import { Link } from "@reach/router";
+import React from 'react';
+import { Link } from '@reach/router';
 
 class Pet extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Pet extends React.Component {
     // If filter is true, it stays in the array, if filter is false, it is
     // kicked out of the array
     if (media && media.photos && media.photos.photo) {
-      photos = media.photos.photo.filter(photo => photo["@size"] == "pn");
+      photos = media.photos.photo.filter(photo => photo['@size'] == 'pn');
     }
 
     return (

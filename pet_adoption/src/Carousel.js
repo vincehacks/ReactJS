@@ -1,6 +1,6 @@
 // Created by Vince Chang
 
-import React from "react";
+import React from 'react';
 
 class Carousel extends React.Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Carousel extends React.Component {
 
     // Returns you an array of photos that have pn as their size
     if (media && media.photos && media.photos.photo) {
-      photos = media.photos.photo.filter(photo => photo["@size"] === "pn");
+      photos = media.photos.photo.filter(photo => photo['@size'] === 'pn');
     }
 
     return { photos };
@@ -50,7 +50,7 @@ class Carousel extends React.Component {
               key={photo.value}
               data-index={index}
               src={photo.value}
-              className={index === active ? "active" : ""}
+              className={index === active ? 'active' : ''}
               alt="animal thumbnail"
             />
           ))}

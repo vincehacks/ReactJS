@@ -1,10 +1,10 @@
 // Created by Vince Chang
 
-import React from "react";
-import Pet from "./Pet";
-import pf from "petfinder-client";
-import { Consumer } from "./SearchContext";
-import SearchBox from "./SearchBox";
+import React from 'react';
+import Pet from './Pet';
+import pf from 'petfinder-client';
+import { Consumer } from './SearchContext';
+import SearchBox from './SearchBox';
 
 const petFinder = pf({});
 
@@ -24,7 +24,7 @@ class Results extends React.Component {
     // This will go out to the petfinder API and return a promise
     petFinder.pet
       .find({
-        output: "full",
+        output: 'full',
         location: this.props.searchParams.location,
         animal: this.props.searchParams.animal,
         breed: this.props.searchParams.breed
@@ -61,7 +61,7 @@ class Results extends React.Component {
         {this.state.pets.map(pet => {
           let breed;
           if (Array.isArray(pet.breeds.breed)) {
-            breed = pet.breeds.breed.join(", ");
+            breed = pet.breeds.breed.join(', ');
           } else {
             breed = pet.breeds.breed;
           }

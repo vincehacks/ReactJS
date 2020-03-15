@@ -1,14 +1,14 @@
 // Created by Vince Chang
 
-import React, { Component } from "react";
-import "./HelloWorldList.css";
-import HelloWorld from "./HelloWorld";
-import AddGreeter from "./AddGreeter";
+import React, { Component } from 'react';
+import './HelloWorldList.css';
+import HelloWorld from './HelloWorld';
+import AddGreeter from './AddGreeter';
 
 class HelloWorldList extends Component {
   constructor(props) {
     super(props);
-    this.state = { greetings: ["VINCE", "CHANG", "AHMA"] };
+    this.state = { greetings: ['VINCE', 'CHANG', 'AHMA'] };
     // Passing down the addGreeting function
     this.addGreeting = this.addGreeting.bind(this);
     this.removeGreeting = this.removeGreeting.bind(this);

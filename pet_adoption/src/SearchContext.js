@@ -1,6 +1,6 @@
 // Created by Vince Chang
 
-import React from "react";
+import React from 'react';
 
 // This class is created to get the location, animal and breed from search
 // params page in order to get it to results for searching purposes
@@ -10,9 +10,9 @@ import React from "react";
 // 2. Consumer: reads from the provider, no matter how much things in between it
 // Have to describe what I want available
 const SearchContext = React.createContext({
-  location: "San Francisco, CA",
-  animal: "",
-  breed: "",
+  location: 'San Francisco, CA',
+  animal: '',
+  breed: '',
   breeds: [],
   handleAnimalChange() {},
   handleBreedChange() {},

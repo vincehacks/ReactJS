@@ -1,8 +1,8 @@
 // Created by Vince Chang
 
-import React from "react";
-import { ANIMALS } from "petfinder-client";
-import { Consumer } from "./SearchContext";
+import React from 'react';
+import { ANIMALS } from 'petfinder-client';
+import { Consumer } from './SearchContext';
 
 class SearchBox extends React.Component {
   constructor(props) {

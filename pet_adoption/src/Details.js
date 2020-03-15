@@ -1,9 +1,9 @@
 // Created by Vince Chang
 
-import React from "react";
-import pf from "petfinder-client";
-import Carousel from "./Carousel";
-import Modal from "./Modal";
+import React from 'react';
+import pf from 'petfinder-client';
+import Carousel from './Carousel';
+import Modal from './Modal';
 
 const petfinder = pf({});
 
@@ -24,14 +24,14 @@ class Details extends React.Component {
   componentDidMount() {
     petfinder.pet
       .get({
-        output: "full",
+        output: 'full',
         id: this.props.id
       })
       .then(data => {
         let breed;
         const pet = data.petfinder.pet;
         if (Array.isArray(pet.breeds.breed)) {
-          breed = pet.breeds.breed.join(", ");
+          breed = pet.breeds.breed.join(', ');
         } else {
           breed = pet.breeds.breed;
         }

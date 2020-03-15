@@ -1,13 +1,13 @@
 // Created by Vince Chang
 
-import React from "react";
-import ReactDOM from "react-dom";
-import { Router, Link } from "@reach/router";
-import pf from "petfinder-client";
-import { Provider } from "./SearchContext";
-import Results from "./Results";
-import Details from "./Details";
-import SearchParams from "./SearchParams";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Router, Link } from '@reach/router';
+import pf from 'petfinder-client';
+import { Provider } from './SearchContext';
+import Results from './Results';
+import Details from './Details';
+import SearchParams from './SearchParams';
 
 const petfinder = pf({});
 
@@ -18,9 +18,9 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      location: "San Francisco, CA",
-      animal: "",
-      breed: "",
+      location: 'San Francisco, CA',
+      animal: '',
+      breed: '',
       breeds: [],
       handleAnimalChange: this.handleAnimalChange.bind(this),
       handleBreedChange: this.handleBreedChange.bind(this),
@@ -37,7 +37,7 @@ class App extends React.Component {
     this.setState(
       {
         animal: event.target.value,
-        breed: ""
+        breed: ''
       },
       this.getBreeds
     );
@@ -89,4 +89,4 @@ class App extends React.Component {
     );
   }
 }
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<App />, document.getElementById('root'));

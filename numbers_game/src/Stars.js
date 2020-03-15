@@ -6,18 +6,13 @@ import React from 'react';
  * Description: This function will render a random number of stars (1-9) and
  * render them onto the screen
  */
-const Stars = (props) => {
-
+const Stars = props => {
   let stars = [];
 
-  for(let i = 0; i < props.numberOfStars; i++){
+  for (let i = 0; i < props.numberOfStars; i++) {
     stars.push(<i key={i} className="fas fa-star"></i>);
   }
-  return(
-    <div className="col-5">
-      {stars}
-    </div>
-  );
-}
+  return <div className="col-5">{stars}</div>;
+};
 
 export default Stars;

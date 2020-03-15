@@ -1,10 +1,10 @@
 // Created by Vince Chang
 
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class Form extends Component {
   // Default state, so it shows empty in the input field
-  state = { userName: "" };
+  state = { userName: '' };
 
   /* Function: handleSubmit
    * Description: This function will be the handler for when a user hits the
@@ -14,7 +14,7 @@ class Form extends Component {
    */
   handleSubmit = event => {
     event.preventDefault();
-    console.log("Event: Form submit", this.state.userName);
+    console.log('Event: Form submit', this.state.userName);
 
     /* Using fetch, returns back a promise, that needs to be transformed
      * into a json object, and passes this as a parameter into onSubmit.
@@ -26,7 +26,7 @@ class Form extends Component {
       .then(this.props.onSubmit);
 
     // Resets the input field to blank
-    this.setState({ userName: "" });
+    this.setState({ userName: '' });
   };
 
   /* Function: render
@@ -37,7 +37,7 @@ class Form extends Component {
     return (
       <form
         onSubmit={this.handleSubmit}
-        style={{ display: "inline-block", marginLeft: 60, marginTop: 70 }}
+        style={{ display: 'inline-block', marginLeft: 60, marginTop: 70 }}
       >
         <input
           type="text"

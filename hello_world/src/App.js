@@ -1,11 +1,11 @@
 // Created by Vince Chang
 
 // Importing the react library from the npm module
-import React from "react";
+import React from 'react';
 
 // Going to start using HelloWorldList instead!
 //import HelloWorld from './HelloWorld';
-import HelloWorldList from "./HelloWorldList";
+import HelloWorldList from './HelloWorldList';
 
 // Instead of calling <HelloWorld/> multiple times, we can just call
 // <HelloWorldList/> once and all will be good!

@@ -1,8 +1,8 @@
 // Created by Vince Chang
 
-import React, { Component } from "react";
-import CardList from "./CardList";
-import Form from "./Form";
+import React, { Component } from 'react';
+import CardList from './CardList';
+import Form from './Form';
 
 class App extends Component {
   // Data that is initially being rendered, using github API to retrieve Avatar
@@ -10,16 +10,16 @@ class App extends Component {
   state = {
     cards: [
       {
-        name: "Vince Chang",
-        avatar_url: "https://avatars2.githubusercontent.com/u/11703494?v=4",
-        login: "vincehacks",
-        url: "https://api.github.com/users/vincehacks"
+        name: 'Vince Chang',
+        avatar_url: 'https://avatars2.githubusercontent.com/u/11703494?v=4',
+        login: 'vincehacks',
+        url: 'https://api.github.com/users/vincehacks'
       },
       {
-        name: "Zach Ho",
-        avatar_url: "https://avatars1.githubusercontent.com/u/15718708?v=4",
-        login: "zachho123",
-        url: "https://api.github.com/users/zachho123"
+        name: 'Zach Ho',
+        avatar_url: 'https://avatars1.githubusercontent.com/u/15718708?v=4',
+        login: 'zachho123',
+        url: 'https://api.github.com/users/zachho123'
       }
     ]
   };
