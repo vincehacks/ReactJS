@@ -1,6 +1,7 @@
 /* Created by Vince Chang
- * This is an function based React class that represents the show card for each
- * show.
+* This is an ES6 Class based React component that will allow me to use and
+* maintain state!
+* All class base react components need a render method and must return markup
  */
 
 import React from 'react';
@@ -27,18 +28,51 @@ const Image = styled.img`
   margin-right: 10px;
   `;
 
-const ShowCard = props => (
-  <Wrapper to={`/details/${props.imdbID}`}>
-    <Image
-      alt={`${props.title} Show Poster`}
-      src={`/public/img/posters/${props.poster}`}
-    />
-    <div>
-      <h3>{props.title}</h3>
-      <h4>({props.year})</h4>
-      <p>{props.description}</p>
-    </div>
-  </Wrapper>
-);
+class ShowCard extends React.Component {
+  /* =========================================================================
+ * Function Name: constructor
+ * Task: This function will bind the state
+ * Everytime you call .bind will create a new function, so that's why do it in
+ * the constructor, but good thing it will only happen once
+ * In newer JS, you no longer need to write the constructor if you write
+ * functions using the arrow function, it will automatically do the binding
+ * refer to transform-class-properties
+   ========================================================================= */
+  constructor(props) {
+    super(props);
+  }
+
+  /* =========================================================================
+ * Function Name: shouldComponentUpdate
+ * Task: This React Life Cycle function is needed for performance. I do not want
+ * the render to happen for each showcard multiple times. This will make sure
+ * that once the showcard has been rendered, it does not render again!
+   ========================================================================= */
+  shouldComponentUpdate() {
+    return false;
+  }
+
+  /* =========================================================================
+ * Function Name: render
+ * Task: This function will render the show's markup and wait for user to input
+ * text in the search bar. This wIll also render the rating returned back from
+ * the API fetch call
+   ========================================================================= */
+  render() {
+    return (
+      <Wrapper to={`/details/${this.props.imdbID}`}>
+        <Image
+          alt={`${this.props.title} Show Poster`}
+          src={`/public/img/posters/${this.props.poster}`}
+        />
+        <div>
+          <h3>{this.props.title}</h3>
+          <h4>({this.props.year})</h4>
+          <p>{this.props.description}</p>
+        </div>
+      </Wrapper>
+    );
+  }
+}
 
 export default ShowCard;
