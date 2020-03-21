@@ -49021,9 +49021,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // 2. Consumer: reads from the provider, no matter how much things in between it
 // Have to describe what I want available
 var SearchContext = _react.default.createContext({
-  location: "San Francisco, CA",
-  animal: "",
-  breed: "",
+  location: 'San Francisco, CA',
+  animal: '',
+  breed: '',
   breeds: [],
   handleAnimalChange: function handleAnimalChange() {},
   handleBreedChange: function handleBreedChange() {},
@@ -49094,7 +49094,7 @@ function (_React$Component) {
 
       if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
-          return photo["@size"] == "pn";
+          return photo['@size'] == 'pn';
         });
       }
 
@@ -49313,7 +49313,7 @@ function (_React$Component) {
 
       // This will go out to the petfinder API and return a promise
       petFinder.pet.find({
-        output: "full",
+        output: 'full',
         location: this.props.searchParams.location,
         animal: this.props.searchParams.animal,
         breed: this.props.searchParams.breed
@@ -49352,7 +49352,7 @@ function (_React$Component) {
         var breed;
 
         if (Array.isArray(pet.breeds.breed)) {
-          breed = pet.breeds.breed.join(", ");
+          breed = pet.breeds.breed.join(', ');
         } else {
           breed = pet.breeds.breed;
         }
@@ -49507,7 +49507,7 @@ function (_React$Component) {
           key: photo.value,
           "data-index": index,
           src: photo.value,
-          className: index === active ? "active" : "",
+          className: index === active ? 'active' : '',
           alt: "animal thumbnail"
         });
       })));
@@ -49520,7 +49520,7 @@ function (_React$Component) {
 
       if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
-          return photo["@size"] === "pn";
+          return photo['@size'] === 'pn';
         });
       }
 
@@ -49567,7 +49567,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
-var modalRoot = document.getElementById("modal");
+var modalRoot = document.getElementById('modal');
 
 var Modal =
 /*#__PURE__*/
@@ -49581,7 +49581,7 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props)); // This is a div that will be injected into Modal located in index.html
 
-    _this.el = document.createElement("div");
+    _this.el = document.createElement('div');
     return _this;
   }
 
@@ -49678,14 +49678,14 @@ function (_React$Component) {
       var _this2 = this;
 
       petfinder.pet.get({
-        output: "full",
+        output: 'full',
         id: this.props.id
       }).then(function (data) {
         var breed;
         var pet = data.petfinder.pet;
 
         if (Array.isArray(pet.breeds.breed)) {
-          breed = pet.breeds.breed.join(", ");
+          breed = pet.breeds.breed.join(', ');
         } else {
           breed = pet.breeds.breed;
         }
@@ -49788,7 +49788,7 @@ function (_React$Component) {
     key: "handleSearchSubmit",
     // Goes back to home page
     value: function handleSearchSubmit() {
-      (0, _router.navigate)("/");
+      (0, _router.navigate)('/');
     }
   }, {
     key: "render",
@@ -49975,7 +49975,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58732" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50109" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
