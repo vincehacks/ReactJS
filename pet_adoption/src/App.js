@@ -14,6 +14,15 @@ const petfinder = pf({});
 class App extends React.Component {
   // Moving all of the state logic on app itself so I can use provider and
   // consumers to pass props to the correct componenets
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Everytime you call .bind will create a new function, so that's why do it in
+  * the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   constructor(props) {
     super(props);
 

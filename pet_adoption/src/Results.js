@@ -21,7 +21,7 @@ class Results extends React.Component {
     this.search();
   }
   search() {
-    // This will go out to the petfinder API and return a promise
+    // This will go out to the pet finder API and return a promise
     petFinder.pet
       .find({
         output: 'full',
@@ -110,7 +110,7 @@ class Results extends React.Component {
 // FUNCTIONAL COMPONENT EQUIVALENT!
 // const App = () => {
 //   return React.createElement("div", {}, [
-//     React.createElement("h1", {}, "Pet Adpotion"),
+//     React.createElement("h1", {}, "Pet Adoption"),
 //     React.createElement(Pet, {
 //       name: "JayJay",
 //       animal: "dog",
