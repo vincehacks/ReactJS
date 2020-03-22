@@ -71,18 +71,18 @@ class App extends React.Component {
     return (
       <div>
         <header>
-          <Link to="/">Pet Adoption !</Link>
-          <Link to="/search-params">
-            <span aria-label="search" role="img">
+          <Link to='/'>Pet Adoption !</Link>
+          <Link to='/search-params'>
+            <span aria-label='search' role='img'>
               🔍
             </span>
           </Link>
         </header>
         <Provider value={this.state}>
           <Router>
-            <Results path="/" />
-            <Details path="/details/:id" />
-            <SearchParams path="/search-params" />
+            <Results path='/' />
+            <Details path='/details/:id' />
+            <SearchParams path='/search-params' />
           </Router>
         </Provider>
       </div>

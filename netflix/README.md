@@ -25,15 +25,19 @@
 
 #### Prettier
 - Prettier is a formatter for code
+- Install with:
+```
+yarn install prettier
+```
 - Good to include for formatting in package.json
 ```
-"format": "prettier --write --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\""
+"format": "prettier --write --tab-width=2 \"js/**/*.{js,jsx}\""
 ```
 
 
 #### Webpack
-- Does minifying (packager): removes whitespace, comments, etc to make the smallest
-weight to your code
+- Does minifying (packager): removes whitespace, comments, etc to make the
+smallest weight to your code
 - Gives you a free web server
 ```
 yarn dev
@@ -48,7 +52,8 @@ OR
 ```
 “build”: “./node_modules/.bin/webpack”
 ```
-- You can use this shorter version because Yarn is smart enough to look in node_modules for webpack so you can omit ./node_modules/.bin/
+- You can use this shorter version because Yarn is smart enough to look in
+node_modules for webpack so you can omit ./node_modules/.bin/
 
 #### Babel
 - Takes ES6 code and transforms it to ES5 code which all browsers understand
