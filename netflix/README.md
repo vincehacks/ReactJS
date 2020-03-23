@@ -20,6 +20,7 @@
   Header component
 - Header.jsx: Will contain the logo in the upper left hand corner called
   "Vince's Netflix" and also the Search bar
+- ShowCard.jsx: All information for the show
 
 #### Tech Stack
 
