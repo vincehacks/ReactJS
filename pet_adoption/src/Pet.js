@@ -11,8 +11,7 @@ class Pet extends React.Component {
   * The output will be the photo of the pet with its breed and location.
    ========================================================================= */
   render() {
-    // Destructing an object so I can refer to the props passed in
-    // Equivalent to: name = this.props.name ...etc
+    // Destructing: name = this.props.name ...etc
     const { name, animal, breed, media, location, id } = this.props;
 
     let photos = [];
@@ -37,20 +36,5 @@ class Pet extends React.Component {
     );
   }
 }
-
-// const Pet = props => {
-// return React.createElement("div", {}, [
-//   React.createElement("h1", {}, props.name),
-//   React.createElement("h2", {}, props.animal),
-//   React.createElement("h2", {}, props.breed)
-// ]);
-// return (
-//   <div>
-//     <h1>{props.name}</h1>
-//     <h2>{props.animal}</h2>
-//     <h2>{props.breed}</h2>
-//   </div>
-// );
-// };
 
 export default Pet;

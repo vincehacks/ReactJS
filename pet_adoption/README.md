@@ -2,16 +2,26 @@
 
 #### Hierarchy
 
-| App.js          | SearchParams.js | Details.js | Pet.js | Results.js |
-| --------------- | --------------- | ---------- | ------ | ---------- |
-| SearchParams.js |                 |            |        |            |
-| Details.js      |                 |            |        |            |
+| App.js          | Results.js   | Details.js  | SearchParams.js | SearchBox.js | Pet.js | Carousel.js | Modal.js |
+| --------------- | ------------ | ----------- | --------------- | ------------ | ------ | ----------- | -------- |
+| Results.js      | SearchBox.js | Carousel.js | SearchBox.js    |              |        |             |
+| Details.js      | Pet.js       | Modal.js    |                 |              |        |             |
+| SearchParams.js |              |             |                 |              |        |             |
+
+App.js: Entry point
+Results.js: This is the homepage that provides SearchBox and list of Pets
+Details.js: When you click on a Pet you can see the details about it
+SearchParams.js: Will render SearchBox.js
+SearchBox.js: Will provide animal search by location, animal, and breed
+Pet.js: Provides photo, description, name, breed, location
+Carousel.js: So you can see all the pictures that come with each animal
+Modal.js: Shows a pop-up box that asks if you would like to adopt the animal
 
 #### Tech Stack
 
 - Dependency Management: Yarn
 - Dynamic Routing: Reach Router
-- Bundler/mini-fyer: Parcel
+- Bundler/minifier: Parcel
 - Styles: CSS File & mix of Styled Components
 - API Communication: Axios, Express, NodeJS
 - State Management: Redux

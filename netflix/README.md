@@ -12,7 +12,7 @@
 
 - Dependency Management: Yarn
 - Dynamic Routing: React Router
-- Bundler/mini-fyer: Webpack
+- Bundler/minifier: Webpack
 - Styles: CSS File & mix of Styled Components
 - API Communication: Axios, Express, NodeJS
 - State Management: Redux

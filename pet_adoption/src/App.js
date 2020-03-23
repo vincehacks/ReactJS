@@ -20,9 +20,6 @@ class App extends React.Component {
   * In newer JS, you no longer need to write the constructor if you write
   * functions using the arrow function, it will automatically do the binding
   * refer to transform-class-properties
-  *
-  * Moving all of the state logic on app itself so I can use provider and
-  * consumers to pass props to the correct components
    ========================================================================= */
   constructor(props) {
     super(props);
@@ -40,33 +37,49 @@ class App extends React.Component {
   }
 
   /* =========================================================================
-  * Function Name: handleSearchTermChange
-  * Task: This function will wait for change to happen and update the state
-  * using React's setState function that will automatically trigger a re-render
-  *
-  * This function executes on a onChange to the input field for search
+  * Function Name: handleLocationChange
+  * Task: This function will update the location based off what the user types
+  * into the location field on the homepage
     ======================================================================== */
   handleLocationChange(event) {
     this.setState({
       location: event.target.value
     });
   }
+
+  /* =========================================================================
+  * Function Name: handleAnimalChange
+  * Task: This function will set the state the the animal based off what the
+  * user selects from the list of selection
+    ======================================================================== */
   handleAnimalChange(event) {
     this.setState(
       {
         animal: event.target.value,
-        breed: ''
+        breed: '' // Resets breed to empty string
       },
-      this.getBreeds
+      this.getBreeds // then automatically called getBreeds once animal changed
     );
   }
+
+  /* =========================================================================
+  * Function Name: handleBreedChange
+  * Task: This function will update the state with breed selected from the list
+  * of selections
+    ======================================================================== */
   handleBreedChange(event) {
     this.setState({
       breed: event.target.value
     });
   }
-  // Retrieve the different breeds per animal
+
+  /* =========================================================================
+  * Function Name: getBreeds
+  * Task: This function will retrieve the breeds for different animals by using
+  * the petfinder API. This will populate the breeds[] in state.
+    ======================================================================== */
   getBreeds() {
+    // CASE: Animal has been selected, so get breeds for this animal
     if (this.state.animal) {
       petfinder.breed.list({ animal: this.state.animal }).then(data => {
         if (
@@ -81,10 +94,24 @@ class App extends React.Component {
           this.setState({ breeds: [] });
         }
       });
-    } else {
+    } else { // CASE: Animal hasn't yet been selected, just have breeds as empty
       this.setState({ breeds: [] });
     }
   }
+
+  /* =========================================================================
+  * Function Name: render
+  * Task: This function will render the show's markup for a pet. It handles
+  * logic for photos because the API will return different sizes of photos.
+  * The output will be the photo of the pet with its breed and location.
+  *
+  * Since Provider is wrapping everything, wherever I instantiate a Context obj
+  * I will have the state that Provider is making accessible which is App's
+  * state.
+  *
+  * Provider defines where I am going to get the resources from, in this case it
+  * is this file App.js 's state. Note you can have multiple Providers
+   ========================================================================= */
   render() {
     return (
       <div>

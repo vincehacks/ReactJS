@@ -49014,12 +49014,24 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Created by Vince Chang
-// This class is created to get the location, animal and breed from search
-// params page in order to get it to results for searching purposes
-// New React Method that creates 2 components
-// 1. Provider: Makes everything underneath it available
-// 2. Consumer: reads from the provider, no matter how much things in between it
-// Have to describe what I want available
+
+/* This is a React function that just sets up the Provider and Consumer, this
+* is not a featured component, just the set up!
+*
+* It has been created to get the location, animal and breed from search.
+* params page in order to get it to results for searching purposes
+*
+* New React Method that creates 2 components
+* 1. Provider: Makes everything underneath it available
+* 2. Consumer: reads from the provider, no matter how much things in between it
+* Have to describe what I want available
+*
+* The whole idea is to have my context object have all of what I list below to
+* be available every time I access my context object! Context will be reading
+* from the App.js state
+*
+* This is React 16's way of doing Redux
+*/
 var SearchContext = _react.default.createContext({
   location: 'San Francisco, CA',
   animal: '',
@@ -49029,7 +49041,8 @@ var SearchContext = _react.default.createContext({
   handleBreedChange: function handleBreedChange() {},
   handleLocationChange: function handleLocationChange() {},
   getBreeds: function getBreeds() {}
-});
+}); // The Provider and Consumer are coming from createContext
+
 
 var Provider = SearchContext.Provider;
 exports.Provider = Provider;
@@ -49080,8 +49093,15 @@ function (_React$Component) {
 
   _createClass(Pet, [{
     key: "render",
+
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the show's markup for a pet. It handles
+    * logic for photos because the API will return different sizes of photos.
+    * The output will be the photo of the pet with its breed and location.
+     ========================================================================= */
     value: function render() {
-      // Destructing an object so I can refer to the props passed in
+      // Destructing: name = this.props.name ...etc
       var _this$props = this.props,
           name = _this$props.name,
           animal = _this$props.animal,
@@ -49092,12 +49112,9 @@ function (_React$Component) {
       var photos = []; // If filter is true, it stays in the array, if filter is false, it is
       // kicked out of the array
 
-      if (media && media.photos && media.photos.photo) {
-        photos = media.photos.photo.filter(function (photo) {
-          return photo['@size'] == 'pn';
-        });
-      }
-
+      if (media && media.photos && media.photos.photo) photos = media.photos.photo.filter(function (photo) {
+        return photo['@size'] == 'pn';
+      });
       return _react.default.createElement(_router.Link, {
         to: "/details/".concat(id),
         className: "pet"
@@ -49113,21 +49130,7 @@ function (_React$Component) {
   }]);
 
   return Pet;
-}(_react.default.Component); // const Pet = props => {
-// return React.createElement("div", {}, [
-//   React.createElement("h1", {}, props.name),
-//   React.createElement("h2", {}, props.animal),
-//   React.createElement("h2", {}, props.breed)
-// ]);
-// return (
-//   <div>
-//     <h1>{props.name}</h1>
-//     <h2>{props.animal}</h2>
-//     <h2>{props.breed}</h2>
-//   </div>
-// );
-// };
-
+}(_react.default.Component);
 
 var _default = Pet;
 exports.default = _default;
@@ -49170,6 +49173,15 @@ var SearchBox =
 function (_React$Component) {
   _inherits(SearchBox, _React$Component);
 
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   function SearchBox(props) {
     var _this;
 
@@ -49179,6 +49191,12 @@ function (_React$Component) {
     _this.handleFormSubmit = _this.handleFormSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
+  /* =========================================================================
+  * Function Name: handleFormSubmit
+  * Task: This function will take use this.props.search which comes from
+  * Results.js
+    ======================================================================== */
+
 
   _createClass(SearchBox, [{
     key: "handleFormSubmit",
@@ -49187,6 +49205,19 @@ function (_React$Component) {
       event.preventDefault();
       this.props.search();
     }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render Location, Animal and Breed fields for
+    * searching for an animal. The Animal and Breed fields will both be Selections
+    *
+    * By importing and wrapping everything in Consumer, I know how everything
+    * available from the Provider which is defined in App.js
+    *
+    * Everything in App.js 's state can now be referenced by using "context"
+    * In other words, "context" is just the state of App.js
+    * Ex. context.handleAnimalChange
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
@@ -49211,7 +49242,9 @@ function (_React$Component) {
           onBlur: context.handleAnimalChange,
           id: "animal",
           value: context.animal
-        }, _react.default.createElement("option", null), _petfinderClient.ANIMALS.map(function (animal) {
+        }, _react.default.createElement("option", {
+          value: ""
+        }, "All Animals"), _petfinderClient.ANIMALS.map(function (animal) {
           return _react.default.createElement("option", {
             key: animal,
             value: animal
@@ -49286,13 +49319,20 @@ var Results =
 function (_React$Component) {
   _inherits(Results, _React$Component);
 
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   function Results(props) {
     var _this;
 
     _classCallCheck(this, Results);
 
-    // This calls React.Component's constructor and passes the props of there
-    //so react knows how to track the props
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Results).call(this, props));
     _this.state = {
       pets: []
@@ -49300,18 +49340,38 @@ function (_React$Component) {
     _this.search = _this.search.bind(_assertThisInitialized(_this));
     return _this;
   }
+  /* =========================================================================
+  * Function Name: componentDidMount (used for fetching info)
+  * Task: This function will is reserved for React. Upon connecting to the DOM
+  * it will delegate to search() to fetch data using the petfinder API using
+  * information provided in props to locate the exact animal object in the API
+  *
+  * This is a separate function because search should get called every time the
+  * Submit button is pressed. If all of search() logic was here, it would only
+  * do it one time (once the component mounts to the DOM and never again) to
+  * make it reuseable, search logic is separated
+    ======================================================================== */
+
 
   _createClass(Results, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.search();
     }
+    /* =========================================================================
+    * Function Name: search
+    * Task: This function will search for animal using petfinder API, get all
+    * required information and populate the pets array in the state with animals
+    * that match the search requirements
+      ======================================================================== */
+
   }, {
     key: "search",
     value: function search() {
       var _this2 = this;
 
-      // This will go out to the petfinder API and return a promise
+      // This will go out to the pet finder API and return a promise
+      // searchParams is referring to context! Look at the export at the bottom!
       petFinder.pet.find({
         output: 'full',
         location: this.props.searchParams.location,
@@ -49340,10 +49400,18 @@ function (_React$Component) {
         });
       });
     }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the show's markup for a pet. It handles
+    * logic for photos because the API will return different sizes of photos.
+    * The output will be the photo of the pet with its breed and location.
+    * Also above all the pets, it will show a SearchBox for selecting animals.
+    * Will also be able to submit using the button
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
-      // Short way by using JSX
       return _react.default.createElement("div", {
         className: "search"
       }, _react.default.createElement(_SearchBox.default, {
@@ -49371,50 +49439,10 @@ function (_React$Component) {
   }]);
 
   return Results;
-}(_react.default.Component); // This is the long way to using React.createElement
-// return React.createElement("div", {}, [
-//   React.createElement(
-//     "h1",
-//     { onClick: this.handleTitleClick },
-//     "Pet Adpotion"
-//   ),
-//   React.createElement(Pet, {
-//     name: "JayJay",
-//     animal: "dog",
-//     breed: "Chihuahua"
-//   }),
-//   React.createElement(Pet, {
-//     name: "Juelz",
-//     animal: "dog",
-//     breed: "Chihuahua"
-//   }),
-//   React.createElement(Pet, {
-//     name: "Hanz",
-//     animal: "dog",
-//     breed: "German Shepard"
-//   })
-// ]);
-// FUNCTIONAL COMPONENT EQUIVALENT!
-// const App = () => {
-//   return React.createElement("div", {}, [
-//     React.createElement("h1", {}, "Pet Adpotion"),
-//     React.createElement(Pet, {
-//       name: "JayJay",
-//       animal: "dog",
-//       breed: "Chihuahua"
-//     }),
-//     React.createElement(Pet, {
-//       name: "Juelz",
-//       animal: "dog",
-//       breed: "Chihuahua"
-//     }),
-//     React.createElement(Pet, {
-//       name: "Hanz",
-//       animal: "dog",
-//       breed: "German Shepard"
-//     })
-//   ]);
-// };
+}(_react.default.Component); // Trick to make context available in other functions outside of render, just
+// passed it as a prop to itself to then use anywhere !
+// If you have to reference context in life cycle methods, you have to do it
+// this way!!!
 
 
 function ResultsWithContext(props) {
@@ -49459,6 +49487,17 @@ var Carousel =
 function (_React$Component) {
   _inherits(Carousel, _React$Component);
 
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+  *
+  * photos will be the array of photos to loop thorough for each animal
+   ========================================================================= */
   function Carousel(props) {
     var _this;
 
@@ -49471,26 +49510,49 @@ function (_React$Component) {
     };
     _this.handleIndexClick = _this.handleIndexClick.bind(_assertThisInitialized(_this));
     return _this;
-  } // New component life cycle method, everytime props change, this is run so
-  // state can be updated. This is static because it will just take props and
-  // return back some state and can call Carousel.getDerivedStateFromProps
+  }
+  /* =========================================================================
+  * Function Name: getDerivedStateFromProps
+  * Task: This function is a new React component life cycle method, every time
+  * that props change, this function is evoked so state can be updated. This
+  * method is static because it will just take props and return back some state
+  * by calling:
+  * Carousel.getDerivedStateFromProps
+  *
+  * Will need to be static because it will only live on the class level, you
+  * won't ever edit state anyways, just return back state
+   ========================================================================= */
 
 
   _createClass(Carousel, [{
     key: "handleIndexClick",
+
+    /* =========================================================================
+    * Function Name: handleIndexClick
+    * Task: This function is a response to when the picture is clicked
+    *
+    * IMPORTANT: event.target.dataset.index will refer to data-index that is set
+    * in the render function. If I were to call the field "data-something" then,
+    * I would have to access it like this "event.target.dataset.something"
+     ========================================================================= */
     value: function handleIndexClick(event) {
-      // dataset will contain anything that has data-SOMETHING
-      // + will take a string and turn into a number
+      // + will take a string and turn into a number (quick hand way to cast)
       this.setState({
         active: +event.target.dataset.index
       });
     }
+    /* =========================================================================
+      * Function Name: render
+      * Task: This function will render all the pictures that come with a certain
+      * pet.
+       =========================================================================*/
+
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
-      // Destructoring
+      // Destructuring: photos = this.state.photos, active = this.state.active
       var _this$state = this.state,
           photos = _this$state.photos,
           active = _this$state.active;
@@ -49516,7 +49578,7 @@ function (_React$Component) {
     key: "getDerivedStateFromProps",
     value: function getDerivedStateFromProps(_ref) {
       var media = _ref.media;
-      var photos = []; // Returns you an array of photos that have pn as their size
+      var photos = []; // Returns you an array of photos that have pn as their size (narrows down)
 
       if (media && media.photos && media.photos.photo) {
         photos = media.photos.photo.filter(function (photo) {
@@ -49574,6 +49636,15 @@ var Modal =
 function (_React$Component) {
   _inherits(Modal, _React$Component);
 
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   function Modal(props) {
     var _this;
 
@@ -49584,6 +49655,18 @@ function (_React$Component) {
     _this.el = document.createElement('div');
     return _this;
   }
+  /* =========================================================================
+  * Function Name: componentDidMount (used for fetching info)
+  * Task: This function will is reserved for React. It will use the petfinder
+  * API and get the information of a pet using the id. It will then return back
+  * a promise that can be iterated over to find out the breed. After getting the
+  * object, now can set the state for all other fields
+  *
+  * NOTE: That one animal can have a mix of breeds or can just be a pure breed
+  * The if-else logic will handle if a animal has more than one breed or is a
+  * single breed
+    ======================================================================== */
+
 
   _createClass(Modal, [{
     key: "componentDidMount",
@@ -49591,11 +49674,37 @@ function (_React$Component) {
       modalRoot.appendChild(this.el);
     } // Need to clean up, so don't have memory leaks
 
+    /* =========================================================================
+    * Function Name: componentWillUnmount (used for fetching info)
+    * Task: This function will is reserved for React. It will use the petfinder
+    * API and get the information of a pet using the id. It will then return back
+    * a promise that can be iterated over to find out the breed. After getting the
+    * object, now can set the state for all other fields
+    *
+    * NOTE: That one animal can have a mix of breeds or can just be a pure breed
+    * The if-else logic will handle if a animal has more than one breed or is a
+    * single breed
+      ======================================================================== */
+
   }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       modalRoot.removeChild(this.el);
     }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the show's markup for a pet. It handles
+    * logic for photos because the API will return different sizes of photos.
+    * The output will be the photo of the pet with its breed and location.
+    *
+    * Since Provider is wrapping everything, wherever I instantiate a Context obj
+    * I will have the state that Provider is making accessible which is App's
+    * state.
+    *
+    * Provider defines where I am going to get the resources from, in this case it
+    * is this file App.js 's state. Note you can have multiple Providers
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
@@ -49651,6 +49760,15 @@ var Details =
 function (_React$Component) {
   _inherits(Details, _React$Component);
 
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   function Details(props) {
     var _this;
 
@@ -49664,15 +49782,20 @@ function (_React$Component) {
     _this.toggleModal = _this.toggleModal.bind(_assertThisInitialized(_this));
     return _this;
   }
+  /* =========================================================================
+  * Function Name: componentDidMount (used for fetching info)
+  * Task: This function will is reserved for React. It will use the petfinder
+  * API and get the information of a pet using the id. It will then return back
+  * a promise that can be iterated over to find out the breed. After getting the
+  * object, now can set the state for all other fields
+  *
+  * NOTE: That one animal can have a mix of breeds or can just be a pure breed
+  * The if-else logic will handle if a animal has more than one breed or is a
+  * single breed
+    ======================================================================== */
+
 
   _createClass(Details, [{
-    key: "toggleModal",
-    value: function toggleModal() {
-      this.setState({
-        showModal: !this.state.showModal
-      });
-    }
-  }, {
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
@@ -49697,7 +49820,8 @@ function (_React$Component) {
           description: pet.description,
           breed: breed,
           media: pet.media,
-          loading: false
+          loading: false // loading is set to false, now having fetched all data
+
         });
       }).catch(function (err) {
         _this2.setState({
@@ -49705,12 +49829,34 @@ function (_React$Component) {
         });
       });
     }
+    /* =========================================================================
+    * Function Name: toggleModal
+    * Task: This function will be evoked when a user clicks on the adopt me button
+    * There is logic in the render() that will do the opposite of what the current
+    * state is for showModal which is true or false. This will toggle between both
+    * If true, the Modal component will be shown, otherwise nothing.
+      ======================================================================== */
+
+  }, {
+    key: "toggleModal",
+    value: function toggleModal() {
+      this.setState({
+        showModal: !this.state.showModal
+      });
+    }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the details about a pet
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
+      // While componentDidMount is fetching data, show this message
       if (this.state.loading) {
         return _react.default.createElement("h1", null, " loading... ");
-      }
+      } // Destructuring: name = this.state.name ...etc
+
 
       var _this$state = this.state,
           name = _this$state.name,
@@ -49786,10 +49932,21 @@ function (_React$Component) {
 
   _createClass(SearchParams, [{
     key: "handleSearchSubmit",
-    // Goes back to home page
+
+    /* =========================================================================
+    * Function Name: handleLocationChange
+    * Task: This function will go back to the home page
+    * navigate() is a function provided by Reach Router
+      ========================================================================*/
     value: function handleSearchSubmit() {
       (0, _router.navigate)('/');
     }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the SearchBox component and will be passed
+    * in the function handleSearchSubmit
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
@@ -49852,8 +50009,15 @@ var App =
 function (_React$Component) {
   _inherits(App, _React$Component);
 
-  // Moving all of the state logic on app itself so I can use provider and
-  // consumers to pass props to the correct componenets
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+   ========================================================================= */
   function App(props) {
     var _this;
 
@@ -49861,9 +50025,9 @@ function (_React$Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(App).call(this, props));
     _this.state = {
-      location: "San Francisco, CA",
-      animal: "",
-      breed: "",
+      location: 'San Francisco, CA',
+      animal: '',
+      breed: '',
       breeds: [],
       handleAnimalChange: _this.handleAnimalChange.bind(_assertThisInitialized(_this)),
       handleBreedChange: _this.handleBreedChange.bind(_assertThisInitialized(_this)),
@@ -49872,6 +50036,12 @@ function (_React$Component) {
     };
     return _this;
   }
+  /* =========================================================================
+  * Function Name: handleLocationChange
+  * Task: This function will update the location based off what the user types
+  * into the location field on the homepage
+    ======================================================================== */
+
 
   _createClass(App, [{
     key: "handleLocationChange",
@@ -49880,27 +50050,47 @@ function (_React$Component) {
         location: event.target.value
       });
     }
+    /* =========================================================================
+    * Function Name: handleAnimalChange
+    * Task: This function will set the state the the animal based off what the
+    * user selects from the list of selection
+      ======================================================================== */
+
   }, {
     key: "handleAnimalChange",
     value: function handleAnimalChange(event) {
       this.setState({
         animal: event.target.value,
-        breed: ""
-      }, this.getBreeds);
+        breed: '' // Resets breed to empty string
+
+      }, this.getBreeds // then automatically called getBreeds once animal changed
+      );
     }
+    /* =========================================================================
+    * Function Name: handleBreedChange
+    * Task: This function will update the state with breed selected from the list
+    * of selections
+      ======================================================================== */
+
   }, {
     key: "handleBreedChange",
     value: function handleBreedChange(event) {
       this.setState({
         breed: event.target.value
       });
-    } // Retrieve the different breeds per animal
+    }
+    /* =========================================================================
+    * Function Name: getBreeds
+    * Task: This function will retrieve the breeds for different animals by using
+    * the petfinder API. This will populate the breeds[] in state.
+      ======================================================================== */
 
   }, {
     key: "getBreeds",
     value: function getBreeds() {
       var _this2 = this;
 
+      // CASE: Animal has been selected, so get breeds for this animal
       if (this.state.animal) {
         petfinder.breed.list({
           animal: this.state.animal
@@ -49916,11 +50106,26 @@ function (_React$Component) {
           }
         });
       } else {
+        // CASE: Animal hasn't yet been selected, just have breeds as empty
         this.setState({
           breeds: []
         });
       }
     }
+    /* =========================================================================
+    * Function Name: render
+    * Task: This function will render the show's markup for a pet. It handles
+    * logic for photos because the API will return different sizes of photos.
+    * The output will be the photo of the pet with its breed and location.
+    *
+    * Since Provider is wrapping everything, wherever I instantiate a Context obj
+    * I will have the state that Provider is making accessible which is App's
+    * state.
+    *
+    * Provider defines where I am going to get the resources from, in this case it
+    * is this file App.js 's state. Note you can have multiple Providers
+     ========================================================================= */
+
   }, {
     key: "render",
     value: function render() {
@@ -49946,7 +50151,7 @@ function (_React$Component) {
   return App;
 }(_react.default.Component);
 
-_reactDom.default.render(_react.default.createElement(App, null), document.getElementById("root"));
+_reactDom.default.render(_react.default.createElement(App, null), document.getElementById('root'));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","@reach/router":"../node_modules/@reach/router/es/index.js","petfinder-client":"../node_modules/petfinder-client/index.js","./SearchContext":"SearchContext.js","./Results":"Results.js","./Details":"Details.js","./SearchParams":"SearchParams.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -49975,7 +50180,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50109" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49567" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
