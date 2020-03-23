@@ -4,9 +4,9 @@
 
 | App.js          | Results.js   | Details.js  | SearchParams.js | SearchBox.js | Pet.js | Carousel.js | Modal.js |
 | --------------- | ------------ | ----------- | --------------- | ------------ | ------ | ----------- | -------- |
-| Results.js      | SearchBox.js | Carousel.js | SearchBox.js    |              |        |             |
-| Details.js      | Pet.js       | Modal.js    |                 |              |        |             |
-| SearchParams.js |              |             |                 |              |        |             |
+| Results.js      | SearchBox.js | Carousel.js | SearchBox.js    |              |        |             |          |
+| Details.js      | Pet.js       | Modal.js    |                 |              |        |             |          |
+| SearchParams.js |              |             |                 |              |        |             |          |
 
 - App.js: Entry point
 - Results.js: This is the homepage that provides SearchBox and list of Pets

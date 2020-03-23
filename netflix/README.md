@@ -2,11 +2,11 @@
 
 #### Hierarchy
 
-| ClientApp.jsx | App.jsx     | Landing.jsx | Search.jsx   | Details.jsx |
-| ------------- | ----------- | ----------- | ------------ | ----------- |
-| App.jsx       | Landing.jsx |             | Header.jsx   | Header.jsx  |
-|               | Search.jsx  |             | ShowCard.jsx |
-|               | Details.jsx |
+| ClientApp.jsx | App.jsx     | Landing.jsx | Search.jsx   | Details.jsx | Header.jsx | ShowCard.jsx |
+| ------------- | ----------- | ----------- | ------------ | ----------- | ---------- | ------------ |
+| App.jsx       | Landing.jsx |             | Header.jsx   | Header.jsx  |            |              |
+|               | Search.jsx  |             | ShowCard.jsx |             |            |              |
+|               | Details.jsx |             |              |             |            |              |
 
 - ClientApp.jsx: Entry point, just renders App.jsx
 - App.jsx: Maintains all the routing (almost like entry again), also will render
