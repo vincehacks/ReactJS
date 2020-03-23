@@ -8,14 +8,14 @@
 | Details.js      | Pet.js       | Modal.js    |                 |              |        |             |
 | SearchParams.js |              |             |                 |              |        |             |
 
-App.js: Entry point
-Results.js: This is the homepage that provides SearchBox and list of Pets
-Details.js: When you click on a Pet you can see the details about it
-SearchParams.js: Will render SearchBox.js
-SearchBox.js: Will provide animal search by location, animal, and breed
-Pet.js: Provides photo, description, name, breed, location
-Carousel.js: So you can see all the pictures that come with each animal
-Modal.js: Shows a pop-up box that asks if you would like to adopt the animal
+- App.js: Entry point
+- Results.js: This is the homepage that provides SearchBox and list of Pets
+- Details.js: When you click on a Pet you can see the details about it
+- SearchParams.js: Will render SearchBox.js
+- SearchBox.js: Will provide animal search by location, animal, and breed
+- Pet.js: Provides photo, description, name, breed, location
+- Carousel.js: So you can see all the pictures that come with each animal
+- Modal.js: Shows a pop-up box that asks if you would like to adopt the animal
 
 #### Tech Stack
 

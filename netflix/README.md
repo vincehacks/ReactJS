@@ -2,11 +2,24 @@
 
 #### Hierarchy
 
-| ClientApp.jsx | App.jsx     | Search.jsx   | Details.jsx |
-| ------------- | ----------- | ------------ | ----------- |
-| App.jsx       | Landing.jsx | Header.jsx   | Header.jsx  |
-|               | Search.jsx  | ShowCard.jsx |
+| ClientApp.jsx | App.jsx     | Landing.jsx | Search.jsx   | Details.jsx |
+| ------------- | ----------- | ----------- | ------------ | ----------- |
+| App.jsx       | Landing.jsx |             | Header.jsx   | Header.jsx  |
+|               | Search.jsx  |             | ShowCard.jsx |
 |               | Details.jsx |
+
+- ClientApp.jsx: Entry point, just renders App.jsx
+- App.jsx: Maintains all the routing (almost like entry again), also will render
+  Landing,jsx, Search.jsx, and Details.jsx.
+- Landing.jsx: Landing page that shows the netflix background and the button to
+  browse all
+- Search.jsx: Will show the Header component which has the logo
+  "Vince's Netflix" and the search bar. Secondly, will show all the ShowCards
+  Users can search and filter for movie titles or keywords
+- Details.jsx: Will show details about the selected shows and also have the
+  Header component
+- Header.jsx: Will contain the logo in the upper left hand corner called
+  "Vince's Netflix" and also the Search bar
 
 #### Tech Stack
 
