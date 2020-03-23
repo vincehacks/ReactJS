@@ -1,14 +1,14 @@
 /* Created by Vince Chang
-* This is an ES6 Class based React component that will allow me to use and
-* maintain state!
-* All class base react components need a render method and must return markup
+ * This is an ES6 Class based React component that will allow me to use and
+ * maintain state!
+ * All class base react components need a render method and must return markup
  */
 
-import React from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-// These are styled componenets and are new to JS, maybe later I can create
+// These are styled components and are new to JS, maybe later I can create
 // classes that will just use these styles below and then call it here
 // <Wrapper> will need to change to <div className="wrapper"> and Image -> img
 const Wrapper = styled(Link)`
@@ -20,19 +20,19 @@ const Wrapper = styled(Link)`
   overflow: hidden;
   color: black;
   text-decoration: none;
-  `;
+`;
 
 const Image = styled.img`
   width: 46%;
   float: left;
   margin-right: 10px;
-  `;
+`;
 
 class ShowCard extends React.Component {
   /* =========================================================================
  * Function Name: constructor
  * Task: This function will bind the state
- * Everytime you call .bind will create a new function, so that's why do it in
+ * Every time you call .bind will create a new function, so that's why do it in
  * the constructor, but good thing it will only happen once
  * In newer JS, you no longer need to write the constructor if you write
  * functions using the arrow function, it will automatically do the binding
@@ -44,10 +44,10 @@ class ShowCard extends React.Component {
 
   /* =========================================================================
  * Function Name: shouldComponentUpdate
- * Task: This React Life Cycle function is needed for performance. I do not want
- * the render to happen for each showcard multiple times. This will make sure
- * that once the showcard has been rendered, it does not render again!
-   ========================================================================= */
+ * Task: This React Life Cycle function is needed for performance. I do not
+ * want the render to happen for each showCard multiple times. This will make
+ * sure that once the showCard has been rendered, it does not render again!
+  ========================================================================= */
   shouldComponentUpdate() {
     return false;
   }

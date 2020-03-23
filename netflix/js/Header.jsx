@@ -3,13 +3,13 @@
  * top of the Search and Detail pages
  */
 
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = props => {
   /* Header conditional logic that defines utilSpace and the input logic if
    * passed, otherwise it will be displayed as a Back button
-   * Search bar will be displated in /search
+   * Search bar will be displayed in /search
    * Back button will be displayed in /details
    */
   let utilSpace;
@@ -27,9 +27,7 @@ const Header = props => {
     // Only Details will not pass any props here, so display back button
     utilSpace = (
       <h2>
-        <Link to="/search">
-          Back
-        </Link>
+        <Link to="/search">Back</Link>
       </h2>
     );
   }
@@ -39,9 +37,7 @@ const Header = props => {
   return (
     <header>
       <h1>
-        <Link to="/">
-          Vince's Netflix
-        </Link>
+        <Link to="/">Vince's Netflix</Link>
       </h1>
       {utilSpace}
     </header>

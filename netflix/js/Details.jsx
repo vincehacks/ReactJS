@@ -4,15 +4,15 @@
  * All class base react components need a render method and must return markup
  */
 
-import React from 'react';
-import Header from './Header';
-import axios from 'axios';
+import React from "react";
+import Header from "./Header";
+import axios from "axios";
 
 class Details extends React.Component {
   /* =========================================================================
  * Function Name: constructor
  * Task: This function will bind the state
- * Everytime you call .bind will create a new function, so that's why do it in
+ * Every time you call .bind will create a new function, so that's why do it in
  * the constructor, but good thing it will only happen once
  * In newer JS, you no longer need to write the constructor if you write
  * functions using the arrow function, it will automatically do the binding
@@ -22,13 +22,13 @@ class Details extends React.Component {
     super(props);
 
     this.state = {
-      apiData: { rating: '' }
+      apiData: { rating: "" }
     };
   }
 
   /* =========================================================================
  * Function Name: componentDidMount
- * Task: This React Life Cycle function is needed for fetching data from api's
+ * Task: This React Life Cycle function is needed for fetching data from APIs
  * This is an example of using axios to fetch data from an api
  * Start API: yarn api (this needs to run before trying it out!)
    ========================================================================= */
@@ -47,9 +47,9 @@ class Details extends React.Component {
  * the API fetch call
    ========================================================================= */
   render() {
-    /* This is destructoring, all of show's props will be stored and
-    * available as the name
-    * Equivalent to: const title = props.show.title...etc*/
+    /* This is de-structoring, all of show's props will be stored and
+     * available as the name
+     * Equivalent to: const title = props.show.title...etc*/
     const { title, description, year, poster, trailer } = this.props.show;
     let ratingComponent;
     // If I get something back from the API then set the rating component as h3

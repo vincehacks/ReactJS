@@ -2,17 +2,16 @@
 
 #### Hierarchy
 
-| App.jsx | App.jsx     | Search.jsx   | Details.jsx |
-| ------- | ----------- | ------------ | ----------- |
-| App.jsx | Landing.jsx | Header.jsx   | Header.jsx  |
-|         | Search.jsx  | ShowCard.jsx |
-|         | Details.jsx |
+| App.js          | SearchParams.js | Details.js | Pet.js | Results.js |
+| --------------- | --------------- | ---------- | ------ | ---------- |
+| SearchParams.js |                 |            |        |            |
+| Details.js      |                 |            |        |            |
 
 #### Tech Stack
 
-- Dependency Managment: Yarn
+- Dependency Management: Yarn
 - Dynamic Routing: Reach Router
-- Bundler/minifyer: Parcel
+- Bundler/mini-fyer: Parcel
 - Styles: CSS File & mix of Styled Components
 - API Communication: Axios, Express, NodeJS
 - State Management: Redux
@@ -79,8 +78,12 @@ yarn dev
 
 #### Reach Router
 
-- Use **BrowserRouter** instead of HashRouter
-- Wrap routes in a <Switch> component (optional)
+- React Router is more famous, but Reach Router is a litte more sophisticated
+- Here are the reasons why:
+- Does not need a `<switch>` because it will be smart enough to know that it can
+  only route to one page at a time
+- Does not need the **exact** attribute because again, it is smart enough to
+  know which to route to
 
 #### State
 
@@ -106,15 +109,15 @@ yarn test
 
 #### Hot Module Replacement (HMR)
 
-- Webpack can see all the dependancies so instead of rebuilding a graph of one
-  module that doesn't have any dependancies, webpack knows to just leave the
+- Webpack can see all the dependencies so instead of rebuilding a graph of one
+  module that doesn't have any dependencies, webpack knows to just leave the
   module alone and not have to re-build it! Hence, Hot Module Replacement
 
-#### Component Lifecycle
+#### Component life cycle
 
 - ComponentDidMount = first time around this will get called
 - Make API calls here or use AJax
-- This is the most important lifecycle method, called once per React component
+- This is the most important life cycle method, called once per React component
 
 #### Redux (State Management Framework)
 

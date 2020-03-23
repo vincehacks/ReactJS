@@ -12,16 +12,17 @@ import SearchParams from './SearchParams';
 const petfinder = pf({});
 
 class App extends React.Component {
-  // Moving all of the state logic on app itself so I can use provider and
-  // consumers to pass props to the correct componenets
   /* =========================================================================
   * Function Name: constructor
   * Task: This function will bind the state
-  * Everytime you call .bind will create a new function, so that's why do it in
-  * the constructor, but good thing it will only happen once
+  * Every time you call .bind will create a new function, so that's why do it
+  * in the constructor, but good thing it will only happen once
   * In newer JS, you no longer need to write the constructor if you write
   * functions using the arrow function, it will automatically do the binding
   * refer to transform-class-properties
+  *
+  * Moving all of the state logic on app itself so I can use provider and
+  * consumers to pass props to the correct components
    ========================================================================= */
   constructor(props) {
     super(props);
@@ -37,6 +38,14 @@ class App extends React.Component {
       getBreeds: this.getBreeds
     };
   }
+
+  /* =========================================================================
+  * Function Name: handleSearchTermChange
+  * Task: This function will wait for change to happen and update the state
+  * using React's setState function that will automatically trigger a re-render
+  *
+  * This function executes on a onChange to the input field for search
+    ======================================================================== */
   handleLocationChange(event) {
     this.setState({
       location: event.target.value
