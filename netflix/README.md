@@ -30,6 +30,7 @@
 - Styles: CSS File & mix of Styled Components
 - API Communication: Axios, Express, NodeJS
 - State Management: Redux
+- Testing: Jest
 
 #### React & ReactDOM
 
