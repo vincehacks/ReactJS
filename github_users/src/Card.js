@@ -1,11 +1,14 @@
-// Created by Vince Chang
+/* Created by Vince Chang */
 
 import React from 'react';
 
-/* Function: Card
- * Description: This function will create individual github cards accessing the
- * information from the props that were passed in
- */
+/* =========================================================================
+* Function Name: Card
+* Task: This React based function will create individual Github cards accessing
+* the information from that is passed in via props
+*
+* The props that are passed in are things such as name, avatar_url, login, url
+  ========================================================================= */
 const Card = props => {
   return (
     <div style={{ margin: '4em' }}>
