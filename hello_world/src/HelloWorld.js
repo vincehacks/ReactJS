@@ -1,14 +1,18 @@
-// Created by Vince Chang
+/* Created by Vince Chang */
 
-// Importing the react library from the npm module
 import React, { Component } from 'react';
 import './HelloWorld.css';
 
-// const HelloWorld = (props) => {
-//   return (<div className="HelloWorld">Hello {props.name}!</div>);
-// };
-
 class HelloWorld extends Component {
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it in
+  * the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+    ========================================================================= */
   constructor(props) {
     super(props);
     this.state = { greeting: 'Hello ' };
@@ -18,21 +22,35 @@ class HelloWorld extends Component {
     this.removeGreeting = this.removeGreeting.bind(this);
   }
 
-  // Method that handles the onClick
+  /* =========================================================================
+  * Function Name: chineseify
+  * Task: This function will set the state to say hello in Chinese
+  *
+  * You can't modify the state inside a class by doing state = blah
+  * Need to use React's setState() function that will update the state
+    ========================================================================= */
   chineseify() {
-    // You can't modify the state inside a class, so need to use this.setState
-    // to do it for me. ex. can't do greeting = "Ni hao"
     this.setState({ greeting: 'Ni Hao ' });
   }
 
-  // Method that will remove a greeting from the props that was passed in!
+  /* =========================================================================
+  * Function Name: removeGreeting
+  * Task: This function will remove a greeting by calling the removeGreeting
+  * function that was passed in via props. This function will remove the name
+  * that was also passed in from props. Follow removeGreeting in HelloWorldList
+    ========================================================================= */
   removeGreeting() {
     this.props.removeGreeting(this.props.name);
   }
 
+  /* =========================================================================
+  * Function Name: render
+  * Task: This function will render a dive with the greeting defined in state
+  * and the name passed in from props. There are two buttons that will either
+  * Chineseify a greeting or remove a greeting
+    ========================================================================= */
   render() {
     return (
-      // this.props.name will come from only this current class, not parent's
       <div className="HelloWorld">
         {this.state.greeting} {this.props.name}!
         <br />

@@ -1,4 +1,4 @@
-// Created by Vince Chang
+/* Created by Vince Chang */
 
 import React, { Component } from 'react';
 import './HelloWorldList.css';
@@ -6,6 +6,15 @@ import HelloWorld from './HelloWorld';
 import AddGreeter from './AddGreeter';
 
 class HelloWorldList extends Component {
+  /* =========================================================================
+  * Function Name: constructor
+  * Task: This function will bind the state
+  * Every time you call .bind will create a new function, so that's why do it in
+  * the constructor, but good thing it will only happen once
+  * In newer JS, you no longer need to write the constructor if you write
+  * functions using the arrow function, it will automatically do the binding
+  * refer to transform-class-properties
+    ========================================================================= */
   constructor(props) {
     super(props);
     this.state = { greetings: ['VINCE', 'CHANG', 'AHMA'] };
@@ -14,22 +23,36 @@ class HelloWorldList extends Component {
     this.removeGreeting = this.removeGreeting.bind(this);
   }
 
-  // Helper function that will return a list of JSX components
+  /* =========================================================================
+  * Function Name: renderGreetings
+  * Task: This function will map over the greetings array that is provided in
+  * state and for each greeting in greetings, will render a new HelloWorld
+  * component
+    ========================================================================= */
   renderGreetings() {
     return this.state.greetings.map(name => (
       <HelloWorld key={name} name={name} removeGreeting={this.removeGreeting} />
     ));
   }
 
-  // This function will add the new name to the greetings list
+  /* =========================================================================
+  * Function Name: addGreeting
+  * Task: This function will add newName to the greetings array which the state
+  * handles.
+  *
+  * The spread operator is used here in this array so I can do a quick way
+  * of appending newName to the end of this array
+    ========================================================================= */
   addGreeting(newName) {
-    // This is how to do an append shortcut, keep original array the same then
-    // add newName to the end of it
     this.setState({ greetings: [...this.state.greetings, newName] });
   }
 
-  // This function will remove a name from the greetings HelloWorldList
-  // The filter will return back a list that excludes the name we are removing!
+  /* =========================================================================
+  * Function Name: removeGreeting
+  * Task: This function will remove a name from the greetings HelloWorldList
+  * The filter function will return back a list that excludes the removeName
+  * The result of the filter is set as the new state for greetings.
+    ========================================================================= */
   removeGreeting(removeName) {
     const filteredGreetings = this.state.greetings.filter(name => {
       return name !== removeName;
@@ -37,17 +60,15 @@ class HelloWorldList extends Component {
     this.setState({ greetings: filteredGreetings });
   }
 
-  // Render with out the renderGreetings()
-  // render() {
-  //   return(
-  //     <div className="HelloWorldList">
-  //       <HelloWorld name='Vincent'/>
-  //       <HelloWorld name='Chang'/>
-  //     </div>
-  //   );
-  // }
-
-  // Render with function call
+  /* =========================================================================
+  * Function Name: render
+  * Task: This function will render a AddGreeter component and pass it the
+  * addGreeting function as a prop
+  *
+  * renderGreetings is automatically evoked which will render HelloWord
+  * components for every name in the greetings array (initially there are three
+  * greetings in the array which are VINCE, CHANG, and AHMA)
+    ========================================================================= */
   render() {
     return (
       <div className="HelloWorldList">

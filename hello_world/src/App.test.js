@@ -1,4 +1,4 @@
-// Created by Vince Chang
+/* Created by Vince Chang */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
