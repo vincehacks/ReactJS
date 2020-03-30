@@ -21,7 +21,8 @@ All of my ReactJS code, exercises, and notes will be found here.
   Github's API to query for the user. The example shows my searching for my
   friend Catherine. Once I click on the submit button, her information is added
   onto the existing list. Screenshot of the object returned back from the API is
-  also provided for reference.
+  also provided for reference. The user will be alerted with a message if he/she
+  is trying to add a card that is already output.
   ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github_users/FinalProduct.png)
   ![Github API](https://github.com/vincehacks/ReactJS/blob/master/github_users/GithubAPI.png)
 
