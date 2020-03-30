@@ -8,9 +8,9 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### Hello_World
 
-- Objective is to enter in names that will be placed on individual cards. The
-  user will be able to have the ability to add or remove users and have the
-  functionality to change the hello greeting.
+- Description: Objective is to enter in names that will be placed on individual
+  cards. The user will be able to have the ability to add or remove users and have
+  the functionality to change the hello greeting.
 - [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
   ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png)
 
@@ -46,9 +46,17 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### Netflix
 
-- Description: This app was built to reflect what Netflix would look like. Tech
-  Stack was React, ES6, JSX, CSS5, Node, Babel, Webpack, along with Jest for testing.
+- Description: This app was built to reflect what Netflix would look like.
+- Tech Stack:
+  - Dependency Management: Yarn
+  - Dynamic Routing: React Router
+  - Bundler/minifier: Webpack
+  - Styles: CSS File & mix of Styled Components
+  - API Communication: Axios, Express, NodeJS
+  - State Management: Redux
+  - Testing: Jest
 - Functionality:
+  - Navigate to /ReactJS/netflix/README.md for more info
   - Users can search for a show and see only hits for that search
   - Can click on a show card and view details about that show
     ![Landing](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png)
@@ -58,13 +66,20 @@ All of my ReactJS code, exercises, and notes will be found here.
 ### Pet Adoption
 
 - Description: This app is used to adopt pets using the Petfinder API
+- Tech Stack:
+  - Dependency Management: Yarn
+  - Dynamic Routing: Reach Router
+  - Bundler/minifier: Parcel (Alternative to webpack)
+  - Styles: CSS File & mix of Styled Components
+  - API Communication: Axios, Express, NodeJS
+  - State Management: React 16 inbuilt createContext (Provider and Consumer)
 - Functionality:
+  - Navigate to /ReactJS/pet_adoption/README.md for more info
   - Users can search for different types of pets by location, animal and breed
   - Can also choose to adopt a pet and read details about that pet
-- Stack: React16, Parcel (alt to webpack)
-  ![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
-  ![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
-  ![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
+    ![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
+    ![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
+    ![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
 
 ### Questions:
 
