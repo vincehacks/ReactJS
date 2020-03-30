@@ -37,10 +37,16 @@ class App extends Component {
   * Function Name: addNewCard
   * Task: This function will take a JSON object that is returned by the
   * call to Github 's API. Will reset the new cards object to contain the new
-  * card that was retrieved
+  * card that was retrieved. This will also prevent people from adding duplicate
+  * cards if already in the array!
     ========================================================================= */
   addNewCard = cardInfo => {
-    this.setState({ cards: this.state.cards.concat(cardInfo) });
+    if (!this.state.cards.find(card => card.login === cardInfo.login)) {
+      this.setState({ cards: this.state.cards.concat(cardInfo) });
+    }
+    else {
+      alert("This card already exists!");
+    }
   };
 
   /* =========================================================================

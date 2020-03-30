@@ -23,9 +23,10 @@ const CardList = props => {
 
   return (
     <div className="Card">
-      {props.cards.map(card => (
-        <Card key={card.login} {...card} />
-      ))}
+      {props.cards
+        .map(card => (
+          <Card key={card.login} {...card} />
+        ))}
     </div>
   );
 };
