@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-/* Function: Home
- * Description: This function will render a simple title to the homepage.
- */
+/* =========================================================================
+* Function Name: Home
+* Task: This React function based component will render a simple title on the
+* homepage.
+  ========================================================================= */
 const Home = () => (
   <div>
     <h1>Welcome to San Francisco 49ers Football</h1>

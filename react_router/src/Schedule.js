@@ -2,9 +2,10 @@
 
 import React from 'react';
 
-/* Function: Schedule
- * Description: This function will render the team's game schedule
- */
+/* =========================================================================
+* Function Name: Schedule
+* Task: This React function based component will render the team's schedule
+========================================================================= */
 const Schedule = () => (
   <div>
     <ul>

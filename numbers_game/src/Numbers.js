@@ -2,14 +2,15 @@
 
 import React from 'react';
 
-/* Function: Number
- * Description: This function will render the potential numbers that the
- * user can pick and choose from.
- */
+/* =========================================================================
+* Function Name: Number
+* Task: This function will render the potential numbers that the user can pick * and choose from.
+  ========================================================================= */
 const Numbers = props => {
-  /* Function: numberClassName
-   * Description: This function will set the appropriate class for each number
-   */
+  /* =========================================================================
+  * Function Name: numberClassName
+  * Task: This function will set the appropriate class for each number
+    ========================================================================= */
   const numberClassName = number => {
     if (props.usedNumbers.indexOf(number) >= 0) {
       return 'used';

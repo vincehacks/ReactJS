@@ -2,10 +2,11 @@
 
 import React from 'react';
 
-/* Function: Stars
- * Description: This function will render a random number of stars (1-9) and
- * render them onto the screen
- */
+/* =========================================================================
+* Function Name: Stars
+* Task: This function will render a random number of stars (1-9) and render
+* them onto the screen
+  ========================================================================= */
 const Stars = props => {
   let stars = [];
 

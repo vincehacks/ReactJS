@@ -13,8 +13,8 @@ const PlayerAPI = {
     { number: 52, name: "Patrick Willis", position: "LB" },
     { number: 7, name: "Colin Kaepernick", position: "QB" }
   ],
-  all: function() { return this.players},
-  get: function(id) {
+  all: function () { return this.players },
+  get: function (id) {
     const isPlayer = p => p.number === id
     return this.players.find(isPlayer)
   }

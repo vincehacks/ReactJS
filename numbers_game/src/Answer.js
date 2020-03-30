@@ -2,11 +2,12 @@
 
 import React from 'react';
 
-/* Function: Answer
- * Description: This function will render the selectedNumbers
- */
+/* =========================================================================
+* Function Name: Answer
+* Task: Function based component that will iterate and display over
+* selectedNumbers that were passed in from props.
+  ========================================================================= */
 const Answer = props => {
-  // Iterate and display over selectedNumbers that were passed in as props
   return (
     <div className="col-5">
       {props.selectedNumbers.map((number, i) => (

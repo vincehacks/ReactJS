@@ -3,9 +3,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-/* Function: Header
- * Description: This function will create the url links to each route.
- */
+/* =========================================================================
+* Function Name: Header
+* Task: This React function based component will create the routes to each page
+  ========================================================================= */
 const Header = () => (
   <header>
     <nav>

@@ -6,13 +6,13 @@ import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 
-/* Function: render
- * Description: This function will render the actual app wrapped with the
- * BrowserRouter component that will act as the router for the whole app. It is
- * good to wrap the app because I can interchange the router type as I see fit.
- */
+/* =========================================================================
+* Function Name: Home
+* Task: This is the entry point to the app. React's BrowserRouter is what wraps
+* the entire application for links to be possible.
+  ========================================================================= */
 ReactDOM.render((
   <BrowserRouter>
     <App />
   </BrowserRouter>
-  ), document.getElementById('root'));
+), document.getElementById('root'));

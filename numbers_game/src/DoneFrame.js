@@ -2,10 +2,11 @@
 
 import React from 'react';
 
-/* Function: DoneFrame
- * Description: This function will render a message indicating if the user won
- * or lost the game
- */
+/* =========================================================================
+* Function Name: DoneFrame
+* Task: This function will render a message indicating if the user won
+* or lost the game
+  ========================================================================= */
 const DoneFrame = props => {
   return (
     <div className="message-align">

@@ -2,11 +2,12 @@
 
 import React from 'react';
 
-/* Function: Button
- * Description: This function will render the button that will allow a user
- * to check their answer to the game.
- * 3 cases: Answer is true, false, and default case where nothing is selected
- */
+/* =========================================================================
+* Function Name: Button
+* Task: This function will render the button that will allow a user
+* to check their answer to the game.
+* 3 cases: Answer is true, false, and default case where nothing is selected
+  ========================================================================= */
 const Button = props => {
   let button;
   switch (props.answerIsCorrect) {
