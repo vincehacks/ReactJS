@@ -16,9 +16,14 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### Github_Users
 
-- Uses Github's API to make pull requests to retrieve and render information
-  about the users
+- Description: This app allows users to query for their own or someone else's
+  Github information by searching for them in the search bar. The search will use
+  Github's API to query for the user. The example shows my searching for my
+  friend Catherine. Once I click on the submit button, her information is added
+  onto the existing list. Screenshot of the object returned back from the API is
+  also provided for reference.
   ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github_users/FinalProduct.png)
+  ![Github API](https://github.com/vincehacks/ReactJS/blob/master/github_users/GithubAPI.png)
 
 ### Numbers_Game
 

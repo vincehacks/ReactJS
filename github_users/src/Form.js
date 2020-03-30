@@ -48,19 +48,18 @@ class Form extends Component {
     ========================================================================= */
   render() {
     return (
-      <form
-        onSubmit={this.handleSubmit}
-        style={{ display: 'inline-block', marginLeft: 60, marginTop: 70 }}
-      >
-        <input
-          type="text"
-          value={this.state.userName}
-          onChange={event => this.setState({ userName: event.target.value })}
-          placeholder="Github username"
-          required
-        />
-        <button type="submit"> Add Card</button>
-      </form>
+      <div>
+        <form className="Form" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            value={this.state.userName}
+            onChange={event => this.setState({ userName: event.target.value })}
+            placeholder="Github Username"
+            required
+          />
+          <button type="submit"> Add Card</button>
+        </form>
+      </div>
     );
   }
 }

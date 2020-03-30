@@ -1,7 +1,72 @@
 /* Created by Vince Chang */
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: sans-serif;
+  text-align: left;
+  background-image: url(github-universe.jpg);
+}
+
+.Main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 4%;
+}
+
+.Main form {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.Card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Card div {
+  color: white;
+}
+
+.ActualCard {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0.5em;
+}
+
+.ActualCard div {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.ActualCard div img {
+  width: 130px;
+  height: 130px;
+  margin-top: 1.5em;
+  margin-right: 1em;
+  text-align: center;
+}
+
+.BigName {
+  font-size: 130%;
+  font-weight: bolder;
+}
+
+.Form {
+  margin: 1em;
+  border: 5px solid #6e5494;
+  border-radius: 4px;
+}
+
+.Form input {
+  width: 200%;
+}
+
+.Form button {
+  border-radius: 2px;
+  width: 100%;
 }

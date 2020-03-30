@@ -21,9 +21,9 @@ import Card from './Card';
   ========================================================================= */
 const CardList = props => {
   return (
-    <div>
+    <div className="Card">
       {props.cards.map(card => (
-        <Card {...card} />
+        <Card key={card.login} {...card} />
       ))}
     </div>
   );

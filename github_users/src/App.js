@@ -18,12 +18,14 @@ class App extends Component {
     cards: [
       {
         name: 'Vince Chang',
+        location: 'San Francisco',
         avatar_url: 'https://avatars2.githubusercontent.com/u/11703494?v=4',
         login: 'vincehacks',
         url: 'https://api.github.com/users/vincehacks'
       },
       {
         name: 'Zach Ho',
+        location: 'San Francisco',
         avatar_url: 'https://avatars1.githubusercontent.com/u/15718708?v=4',
         login: 'zachho123',
         url: 'https://api.github.com/users/zachho123'
@@ -49,7 +51,7 @@ class App extends Component {
     ========================================================================= */
   render() {
     return (
-      <div className="App">
+      <div className="Main">
         <Form onSubmit={this.addNewCard} />
         <CardList cards={this.state.cards} />
       </div>
