@@ -30,18 +30,18 @@
  * yarn test:coverage
  */
 
-import React from 'react';
-import Search from '../Search';
-import { shallow } from 'enzyme';
-import preload from '../../data.json';
-import ShowCard from '../ShowCard';
+import React from "react";
+import Search from "../Search";
+import { shallow } from "enzyme";
+import preload from "../../data.json";
+import ShowCard from "../ShowCard";
 
 /* =========================================================================
  * Function Name: snapshot test
  * Task: This test will test the Search component against a snapshot
- * The snapshot will compare to the previous snapshop (previous version)
+ * The snapshot will compare to the previous snapshot (previous version)
    ========================================================================= */
-test('Search renders correctly', () => {
+test("Search renders correctly", () => {
   const component = shallow(<Search shows={preload.shows} />);
   expect(component).toMatchSnapshot();
 });
@@ -52,7 +52,7 @@ test('Search renders correctly', () => {
  * defined in preload are all rendered properly
  * Enzyme allows the .find() to work for both css & for finding react components
    ========================================================================= */
-test('Search should render correct number of shows', () => {
+test("Search should render correct number of shows", () => {
   const component = shallow(<Search shows={preload.shows} />);
   expect(component.find(ShowCard).length).toEqual(preload.shows.length);
 });

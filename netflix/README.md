@@ -114,6 +114,7 @@ OR
 - Same testing as Jasmine Tests
 - Snapshots are only in Jest not in Jasmine
 - Automatically runs Babel & finds the test file
+- Good for not only testing React but NodeJS as well
 - Most companies use **enzyme** for testing
 - For test coverage, use **Istanbul** for test coverage built in automatically
 
