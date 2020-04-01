@@ -21,7 +21,7 @@ const Card = props => {
         <div>Github Login ID: {props.login}</div>
         <div>Github API URL: {props.url}</div>
       </div>
-    </div >
+    </div>
   );
 };
 

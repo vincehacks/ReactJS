@@ -94,8 +94,7 @@ class SearchBox extends React.Component {
               <button>Submit</button>
             </form>
           </div>
-        )
-        }
+        )}
       </Consumer>
     );
   }

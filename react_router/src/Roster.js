@@ -16,9 +16,9 @@ import Player from './Player';
 ========================================================================= */
 const Roster = () => (
   <Switch>
-    <Route exact path='/roster' component={FullRoster} />
-    <Route path='/roster/:number' component={Player} />
+    <Route exact path="/roster" component={FullRoster} />
+    <Route path="/roster/:number" component={Player} />
   </Switch>
-)
+);
 
 export default Roster;

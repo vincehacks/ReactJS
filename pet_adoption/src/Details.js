@@ -84,7 +84,6 @@ class Details extends React.Component {
   * Task: This function will render the details about a pet
    ========================================================================= */
   render() {
-
     // While componentDidMount is fetching data, show this message
     if (this.state.loading) {
       return <h1> loading... </h1>;

@@ -119,13 +119,12 @@ class Game extends React.Component {
     );
   };
 
-
   /* =========================================================================
   * Function Name: possibleCombinationSum
   * Task: This function will determine if the possible combination of
   * numbers can add up to the target value.
     ========================================================================= */
-  possibleCombinationSum = function (arr, n) {
+  possibleCombinationSum = function(arr, n) {
     if (arr.indexOf(n) >= 0) {
       return true;
     }
@@ -236,13 +235,13 @@ class Game extends React.Component {
               resetGame={this.resetGame}
             />
           ) : (
-              <Numbers
-                arrayOfNumbers={this.arrayOfNumbers}
-                selectedNumbers={this.state.selectedNumbers}
-                selectNumber={this.selectNumber}
-                usedNumbers={this.state.usedNumbers}
-              />
-            )}
+            <Numbers
+              arrayOfNumbers={this.arrayOfNumbers}
+              selectedNumbers={this.state.selectedNumbers}
+              selectNumber={this.selectNumber}
+              usedNumbers={this.state.usedNumbers}
+            />
+          )}
           <br />
           <br />
         </div>

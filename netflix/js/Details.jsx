@@ -4,9 +4,9 @@
  * All class base react components need a render method and must return markup
  */
 
-import React from "react";
-import Header from "./Header";
-import axios from "axios";
+import React from 'react';
+import Header from './Header';
+import axios from 'axios';
 
 class Details extends React.Component {
   /* =========================================================================
@@ -22,7 +22,7 @@ class Details extends React.Component {
     super(props);
 
     this.state = {
-      apiData: { rating: "" }
+      apiData: { rating: '' }
     };
   }
 

@@ -11,6 +11,6 @@ const Home = () => (
   <div>
     <h1>Welcome to San Francisco 49ers Football</h1>
   </div>
-)
+);
 
 export default Home;

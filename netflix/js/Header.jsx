@@ -3,8 +3,8 @@
  * top of the Search and Detail pages
  */
 
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = props => {
   /* Header conditional logic that defines utilSpace and the input logic if

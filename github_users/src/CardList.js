@@ -3,7 +3,6 @@
 import React from 'react';
 import Card from './Card';
 
-
 /* =========================================================================
 * Function Name: CardList
 * Task: This React based function will be passed an array of cards via props.
@@ -20,13 +19,11 @@ import Card from './Card';
 * and passing all of those items in individually
   ========================================================================= */
 const CardList = props => {
-
   return (
     <div className="Card">
-      {props.cards
-        .map(card => (
-          <Card key={card.login} {...card} />
-        ))}
+      {props.cards.map(card => (
+        <Card key={card.login} {...card} />
+      ))}
     </div>
   );
 };

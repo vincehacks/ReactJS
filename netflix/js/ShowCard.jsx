@@ -4,9 +4,9 @@
  * All class base react components need a render method and must return markup
  */
 
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // These are styled components and are new to JS, maybe later I can create
 // classes that will just use these styles below and then call it here

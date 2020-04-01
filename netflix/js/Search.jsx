@@ -4,9 +4,9 @@
  * All class base react components need a render method and must return markup
  */
 
-import React from "react";
-import ShowCard from "./ShowCard";
-import Header from "./Header";
+import React from 'react';
+import ShowCard from './ShowCard';
+import Header from './Header';
 
 class Search extends React.Component {
   /* =========================================================================
@@ -22,7 +22,7 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      searchTerm: ""
+      searchTerm: ''
     };
 
     // Bindings so changes and states are updated
@@ -68,9 +68,7 @@ class Search extends React.Component {
                   .toUpperCase()
                   .indexOf(this.state.searchTerm.toUpperCase()) >= 0
             )
-            .map(show => (
-              <ShowCard key={show.imdbID} {...show} />
-            ))}
+            .map(show => <ShowCard key={show.imdbID} {...show} />)}
         </div>
       </div>
     );

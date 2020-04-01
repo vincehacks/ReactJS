@@ -85,7 +85,7 @@ class Carousel extends React.Component {
                 className={index === active ? 'active' : ''}
                 alt="animal thumbnail"
               />
-            )
+            );
           })}
         </div>
       </div>

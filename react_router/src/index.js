@@ -11,8 +11,9 @@ import { BrowserRouter } from 'react-router-dom';
 * Task: This is the entry point to the app. React's BrowserRouter is what wraps
 * the entire application for links to be possible.
   ========================================================================= */
-ReactDOM.render((
+ReactDOM.render(
   <BrowserRouter>
     <App />
-  </BrowserRouter>
-), document.getElementById('root'));
+  </BrowserRouter>,
+  document.getElementById('root')
+);

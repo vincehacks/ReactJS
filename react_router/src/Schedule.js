@@ -14,6 +14,6 @@ const Schedule = () => (
       <li>7/4 @ New York</li>
     </ul>
   </div>
-)
+);
 
 export default Schedule;

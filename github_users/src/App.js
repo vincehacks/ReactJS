@@ -43,9 +43,8 @@ class App extends Component {
   addNewCard = cardInfo => {
     if (!this.state.cards.find(card => card.login === cardInfo.login)) {
       this.setState({ cards: this.state.cards.concat(cardInfo) });
-    }
-    else {
-      alert("This card already exists!");
+    } else {
+      alert('This card already exists!');
     }
   };
 
