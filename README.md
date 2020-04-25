@@ -4,7 +4,7 @@ Created by Vince Chang </br>
 
 All of my ReactJS code, exercises, and notes will be found here.
 
-### Projects
+### PROJECTS
 
 ### Hello_World
 
@@ -82,7 +82,7 @@ All of my ReactJS code, exercises, and notes will be found here.
     ![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
     ![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
 
-### Questions:
+### QUESTIONS:
 
     1. When should I use `extends Component`? Instead of extend React.Component
        - They are ideally the same, but {Component} will just import the
