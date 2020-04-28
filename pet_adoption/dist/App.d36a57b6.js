@@ -50104,9 +50104,11 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", null, _react.default.createElement("header", null, _react.default.createElement(_router.Link, {
+      return _react.default.createElement("div", null, _react.default.createElement("header", null, _react.default.createElement("div", {
+        className: "logo"
+      }, _react.default.createElement(_router.Link, {
         to: "/"
-      }, "Pet Adoption !"), _react.default.createElement(_router.Link, {
+      }, "Pet Adoption !")), _react.default.createElement(_router.Link, {
         to: "/search-params"
       }, _react.default.createElement("span", {
         "aria-label": "search",
@@ -50155,7 +50157,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51916" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54926" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
