@@ -79,8 +79,8 @@ All of my ReactJS code, exercises, and notes will be found here.
   - Users can search for different types of pets by location, animal and breed
   - Can also choose to adopt a pet and read details about that pet
     ![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
-    ![Shows](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
-    ![Search](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
+    ![Details](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
+    ![Modal](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
 
 ### QUESTIONS:
 
