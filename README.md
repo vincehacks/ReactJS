@@ -84,45 +84,92 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### QUESTIONS:
 
-    1. When should I use `extends Component`? Instead of extend React.Component
-       - They are ideally the same, but {Component} will just import the
-       Component itself and not the whole Library itself. Rule of thumb, is
-       import only the things you need.
+1. When should I use `extends Component`? Instead of extend React.Component
 
-    2. Where do you need to call ReactDOM.render() ? Every file or just in the
-       main?
-       - Just in the main, the <App> container
+   - They are ideally the same, but `{Component}` will just import the component
+     itself and not the whole Library itself. Rule of thumb, it imports only the
+     things you need.
 
-    3. Is className suppose to be a CSS class that you create yourself?
-       - className is reserved
+2. Where do you need to call ReactDOM.render() ? Every file or just in the main?
 
-    4. When you render multiple components you need to have keys
-       - This will avoid the warning, for React's rendering, it needs to know if it can reuse the component
+   - Just in the main, the `<App>` container
 
-    5. Show example of import and export components, do you separate components
-       by file? Or is it better to have more than one component in the same
-       file?
-       - Depends on what you are trying to build
+3. Is className suppose to be a CSS class that you create yourself?
 
-    6. Why do we pass in props in a constructor and why do we have to call
-       super?
-       - Only use constructor if it has a state and if you want to attach a
-       function to it, we call super to initialize the the component. Javascript prototype
+   - `className` is reserved
 
-    7. What does this.bind do and if you didn’t use it, what would 'this' refer
-       to?
-       - If I didn’t bind it, it would refer to the actual function that I'm
-       calling it in as oppose to the component itself
+4. When you render multiple components you need to have keys
 
-    8. Why do I have to export 'App'?
-       - I have to import app to index.js (this is the entry point). create-
-       react-app will give index.js to index.html as a minified version!
+   - This will avoid the warning, for React's rendering, it needs to know if it
+     can reuse the component
 
-    9. What does export default COMPONENT do?
-       - Tells exactly which component to use. If there were two+ components,
-       it would be confusing as to which component to use/import
+5)  Show example of import and export components, do you separate components by
+    file? Or is it better to have more than one component in the same file?
 
-    10. !== compares both type and value and != just compares value
+        - Depends on what you are trying to build
+
+6)  Why do we pass in props in a constructor and why do we have to call super?
+
+    - Only use constructor if it has a state and if you want to attach a
+      function to it, we call super to initialize the the component. Javascript
+      prototype
+
+7)  What does `this.bind` do and if you didn’t use it, what would `this` refer
+    to?
+
+        - If I didn’t bind it, it would refer to the actual function that I'm
+          calling it in as oppose to the component itself
+
+8)  Why do I have to `export App`?
+
+    - I have to import app to `index.js` (this is the entry point). create-
+      react-app will give `index.js` to `index.html` as a minified version!
+
+9)  What does `export default COMPONENT` do?
+
+    - Tells exactly which component to use. If there were two+ components,
+      it would be confusing as to which component to use/import
+
+10) `!==` compares both type and value and `!=` just compares value
+
+### INTERVIEW QUESTIONS
+
+1. What is the purpose of state in React? How would you update State?
+
+   - Determines how a component renders and behaves
+   - Allows you to create components that are dynamic and interactive
+   - Each component can maintain its own state
+
+2. Are you familiar with React life cycle? In which life cycle event do you make
+   AJAX calls and why?
+
+   - Should use `componentDidMount` when trying to make
+     AJAX calls
+   - This method will be executed with the component "mounts" to the
+     DOM for the first time. This method is only executed once during the
+     component's life.
+
+3. How do you update props in React?
+
+   - A React component should use props to store information that can be
+     changed, but can only be changed by a different component. But for state, a
+     React component should use state to store information that the component
+     itself can change.
+
+4. What is the difference between **pure** and **impure** functions?
+
+   - **Pure**: Don't modify variables, state, data and returns the same output
+     given the same input
+   - **Impure**: Mutates variables, state, data outside of lexical scope
+
+5. What is your opinion on **Promises** and **Callbacks**?
+   - **Promise**: A promise is an object that wraps an asynchronous operation
+     and notifies when it is done. This sounds like callbacks, but promises work
+     differently, Promises use `then(...)` for success and `catch(...)` for
+     errors
+   - **Callback**: For JavaScript to know when an asynchronous operation has a
+     result.
+   - Use **promises** when see **"callback hell"** which are nested callbacks!
 
 ### REACTJS CODECADEMY PART 1
 
@@ -288,8 +335,8 @@ const listItems = strings.map(string => <li>{string}</li>);
 - `import {NavBar} from './NavBar';`
 - `import { faveManifestos, alsoRan } from './Manifestos';`
 - When you import a variable from a file that is not the current file, then an
-  import statement isn't quite enough. You also need an export statement, written
-  in the other file, exporting the variable that you hope to grab.
+  import statement isn't quite enough. You also need an export statement,
+  written in the other file, exporting the variable that you hope to grab.
 - `export class NavBar extends React.Component {`
 
 #### this.props
