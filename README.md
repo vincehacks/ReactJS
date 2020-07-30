@@ -12,7 +12,9 @@ All of my ReactJS code, exercises, and notes will be found here.
   cards. The user will be able to have the ability to add or remove users and have
   the functionality to change the hello greeting.
 - [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
-  ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png" />
+  </p>
 
 ### Github_Users
 
@@ -24,7 +26,9 @@ All of my ReactJS code, exercises, and notes will be found here.
   also provided for reference. The user will be alerted with a message if he/she
   is trying to add a card that is already output.
   ![Final Product](https://github.com/vincehacks/ReactJS/blob/master/github_users/FinalProduct.png)
-  ![Github API](https://github.com/vincehacks/ReactJS/blob/master/github_users/GithubAPI.png)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/github_users/GithubAPI.png" />
+  </p>
 
 ### Numbers_Game
 
@@ -41,9 +45,11 @@ All of my ReactJS code, exercises, and notes will be found here.
   - Verification is done to also notify user of win or loss
 - Used Bootstrap, Font Awesome and CSS to build layout of the UI for the game
 - 5 Components: Game, Numbers, Stars, Button, Answer
-  ![Start Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct1.png)
-  ![Win Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct2.png)
-  ![Lose Game](https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct1.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png"/>
+  </p>
 
 ### Netflix
 
@@ -60,9 +66,11 @@ All of my ReactJS code, exercises, and notes will be found here.
   - Navigate to /ReactJS/netflix/README.md for more info
   - Users can search for a show and see only hits for that search
   - Can click on a show card and view details about that show
-    ![Landing](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png)
-    ![Shows](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct2.png)
-    ![Search](https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct2.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png"/>
+  </p>
 
 ### Pet Adoption
 
@@ -78,9 +86,11 @@ All of my ReactJS code, exercises, and notes will be found here.
   - Navigate to /ReactJS/pet_adoption/README.md for more info
   - Users can search for different types of pets by location, animal and breed
   - Can also choose to adopt a pet and read details about that pet
-    ![Landing](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png)
-    ![Details](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png)
-    ![Modal](https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png"/>
+  </p>
 
 ### QUESTIONS:
 
