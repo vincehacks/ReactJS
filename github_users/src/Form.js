@@ -41,7 +41,7 @@ class Form extends Component {
   * Function Name: render
   * Task: This function will be responsible for showing the input field
   * and button. When the user types in a username in the input field, the state
-  * is updates the username to the input provided. When the button is clicked,
+  * updates the username to the input provided. When the button is clicked,
   * handleSubmit() is executed where it will provide the fetched profile from
   * Github 's API to the onSubmit function that has been passed in via props.
   * To follow this flow, go back to App.js to view onSubmit().
