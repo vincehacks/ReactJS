@@ -4,7 +4,7 @@ import React from 'react';
 
 function handleClick(props) {
   // props.handleClick;
-  alert("Hello Worlds");
+  alert("hey");
 }
 
 /* =========================================================================

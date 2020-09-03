@@ -33,7 +33,7 @@ function App() {
   });
 
   /* HOOK: useEffect() is like 3 Lifecycle methods combine into one which are:
-   * componentDidMount,
+   * componentDidMount, update and unmount
    * The useEffect will be used to query the Covid-19 API and get the response
    * back. Because fetch() is being used, a promise to a
    */

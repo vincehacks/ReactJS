@@ -24,24 +24,23 @@ const List = (props) => {
   let arr = [];
   for (let i = index; i < index + 10; i++) {
     console.log(i);
-    console.log(covidData[i]);
-    //arr.push(new Object(covidData[i]));
-    arr.push(i);
+    console.log(covidData.Countries[i]);
+    arr.push(covidData.Countries[i]);
   }
 
   return (
     <>
       <h2 className='list-head'>Countries</h2>
-      {covidData.Countries.map((country) => {
-        return (
-          <CountryCard {...country} />
-        );
-      })}
-      {/* {arr.map((country) => {
+      {/* {covidData.Countries.map((country) => {
         return (
           <CountryCard {...country} />
         );
       })} */}
+      {arr.map((country) => {
+        return (
+          <CountryCard {...country} />
+        );
+      })}
     </>
   );
 };
