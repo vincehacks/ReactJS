@@ -152,7 +152,7 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 10) `!==` compares both type and value and `!=` just compares value
 
-### INTERVIEW QUESTIONS
+### GOOD QUESTIONS
 
 1. What is the purpose of state in React? How would you update State?
 
@@ -191,7 +191,7 @@ All of my ReactJS code, exercises, and notes will be found here.
      result.
    - Use **promises** when see **"callback hell"** which are nested callbacks!
 
-### REACTJS CODECADEMY PART 1
+### REACTJS PART 1
 
 ### I. INTRO TO JSX
 
@@ -393,7 +393,7 @@ const listItems = strings.map(string => <li>{string}</li>);
 - Any time that you call `this.setState()`, `this.setState()` AUTOMATICALLY
   calls `.render()` as soon as the state has changed.
 
-### REACTJS CODECADEMY PART 2
+### REACTJS PART 2
 
 #### Stateless Components Inherit From Stateful Components
 
