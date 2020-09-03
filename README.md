@@ -6,14 +6,25 @@ All of my ReactJS code, exercises, and notes will be found here.
 
 ### PROJECTS
 
-### Hello_World
+### Netflix
 
-- Description: Objective is to enter in names that will be placed on individual
-  cards. The user will be able to have the ability to add or remove users and have
-  the functionality to change the hello greeting.
-- [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
+- Description: This app was built to reflect what Netflix would look like.
+- Tech Stack:
+  - Dependency Management: Yarn
+  - Dynamic Routing: React Router
+  - Bundler/minifier: Webpack
+  - Styles: CSS File & mix of Styled Components
+  - API Communication: Axios, Express, NodeJS
+  - State Management: Redux
+  - Testing: Jest
+- Functionality:
+  - Navigate to /ReactJS/netflix/README.md for more info
+  - Users can search for a show and see only hits for that search
+  - Can click on a show card and view details about that show
   <p align="center">
-  <img src="https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png" />
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct2.png"/>
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png"/>
   </p>
 
 ### Github_Users
@@ -51,27 +62,6 @@ All of my ReactJS code, exercises, and notes will be found here.
   <img src="https://github.com/vincehacks/ReactJS/blob/master/numbers_game/FinalProduct3.png"/>
   </p>
 
-### Netflix
-
-- Description: This app was built to reflect what Netflix would look like.
-- Tech Stack:
-  - Dependency Management: Yarn
-  - Dynamic Routing: React Router
-  - Bundler/minifier: Webpack
-  - Styles: CSS File & mix of Styled Components
-  - API Communication: Axios, Express, NodeJS
-  - State Management: Redux
-  - Testing: Jest
-- Functionality:
-  - Navigate to /ReactJS/netflix/README.md for more info
-  - Users can search for a show and see only hits for that search
-  - Can click on a show card and view details about that show
-  <p align="center">
-  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct1.png"/>
-  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct2.png"/>
-  <img src="https://github.com/vincehacks/ReactJS/blob/master/netflix/FinalProduct3.png"/>
-  </p>
-
 ### Pet Adoption
 
 - Description: This app is used to adopt pets using the Petfinder API
@@ -90,6 +80,26 @@ All of my ReactJS code, exercises, and notes will be found here.
   <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct1.png"/>
   <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct2.png"/>
   <img src="https://github.com/vincehacks/ReactJS/blob/master/pet_adoption/FinalProduct3.png"/>
+  </p>
+
+### Hello_World
+
+- Description: Objective is to enter in names that will be placed on individual
+  cards. The user will be able to have the ability to add or remove users and have
+  the functionality to change the hello greeting.
+- [Tutorial Link](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/hello_world/FinalProduct.png" />
+  </p>
+
+### Covid-19
+
+- Description: Objective is to display the real-time numbers of Covid-19 cases
+  reported from different countries. This data is found and utilized from the
+  official Covid-19 API. This project uses **React Hooks**. One of the features
+  of this project is that pagination is implemented.
+  <p align="center">
+  <img src="https://github.com/vincehacks/ReactJS/blob/master/covid/FinalProduct.png" />
   </p>
 
 ### QUESTIONS:
